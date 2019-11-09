@@ -57,5 +57,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usesGlobalCD: 1
-  cooldown: 10
-  player: {fileID: 0}
+  cooldown: 0
+  user: {fileID: 0}
