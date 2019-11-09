@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedEnemyAttackHandler : AttackHandler
+public class MeleeEnemyAttackHandler : AttackHandler
 {
     GameObject player;
 
@@ -15,7 +15,7 @@ public class RangedEnemyAttackHandler : AttackHandler
     void Update()
     {
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
-        if (Random.Range(0, 1) <= 0.1f && Vector3.Distance(transform.position, player.transform.position) <= 25)
+        if (Random.Range(0, 1) <= 0.1f && Vector3.Distance(transform.position, player.transform.position) <= 1.5f)
         {
             UseAbility(0);
         }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Stats : MonoBehaviour
 {
     public float maxHealth;
-    [HideInInspector]
     public float health;
 
     private void Start()
