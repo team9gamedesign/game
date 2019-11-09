@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4343271840877051176, guid: a58a7067a7df64e328acb4e821da7b5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4343271840877051178, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -403,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f268ecc2f40ff4c98932094c930ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 5, y: 12, z: -10}
+  offset: {x: 10, y: 12, z: -10}
 --- !u!1 &1861790291
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343271840877051176, guid: a58a7067a7df64e328acb4e821da7b5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4343271840877051178, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
@@ -649,5 +659,10 @@ PrefabInstance:
       propertyPath: abilities.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4426969896390083611, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c51941f03c32942059143992f1eced5a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
