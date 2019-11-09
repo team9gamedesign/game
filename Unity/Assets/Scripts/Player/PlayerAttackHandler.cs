@@ -10,7 +10,7 @@ public class PlayerAttackHandler : AttackHandler
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
 
         if(Input.GetKey(KeyCode.Alpha1)) { //Button 1
-
+            UseAbility(2);
         }
         if(Input.GetKey(KeyCode.Alpha2)) { //Button 2
 
@@ -22,7 +22,7 @@ public class PlayerAttackHandler : AttackHandler
 
         }
         if(Input.GetMouseButton(1)) { //Right mouse button
-
+            UseAbility(1);
         }
         if(Input.GetMouseButton(0)) { //Left mouse button
             UseAbility(0);

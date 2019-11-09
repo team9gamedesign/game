@@ -159,6 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 8680567473786358481, guid: 66ecd1ec812719343b70003701fc6b6c, type: 3}
+  - {fileID: 8680567473786358481, guid: 66ecd1ec812719343b70003701fc6b6c, type: 3}
+  - {fileID: 8428113620205778511, guid: 6913693db06ce4bcb9c6310f5d385d22, type: 3}
   abilityCooldowns: []
 --- !u!95 &29488464
 Animator:
