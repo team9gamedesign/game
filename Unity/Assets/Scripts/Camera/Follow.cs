@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
+    public Vector3 offset;
+
     GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,7 @@ public class Follow : MonoBehaviour
     void Update()
     {
         Vector3 playerPosition = player.transform.position;
-        transform.position = new Vector3(playerPosition.x, 8, playerPosition.z - 4);
+        transform.position = playerPosition + offset;
+        transform.rotation = Quaternion.LookRotation(playerPosition - transform.position);
     }
 }

@@ -20,7 +20,10 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        UpdateMovement();
+        if(GetComponent<Stats>().health > 0)
+        {
+            UpdateMovement();
+        }
     }
 
     void UpdateMovement()

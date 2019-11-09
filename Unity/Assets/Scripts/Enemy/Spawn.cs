@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     public GameObject enemy;
 
     private float timer;
-    private float spawnTime;
+    public float spawnTime;
 
     private GameObject player;
 
@@ -15,7 +15,6 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         timer = 0;
-        spawnTime = 2;
 
         player = GameObject.FindWithTag("Player"); //TODO: Fix so we don't look for tags
     }
@@ -27,7 +26,7 @@ public class Spawn : MonoBehaviour
         if(timer >= spawnTime) {
             timer = 0;
             GameObject enemySpawned = Instantiate(enemy, transform.position, Quaternion.identity, null);
-            enemySpawned.GetComponent<FollowPlayer>().player = player;
+            //enemySpawned.GetComponent<FollowPlayer>().player = player;
         }
     }
 }

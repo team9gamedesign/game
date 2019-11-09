@@ -40,14 +40,14 @@ public class AttackHandler : MonoBehaviour
             if(abilityPrefab.GetComponent<Ability>().usesGlobalCD && Mathf.Approximately(globalCD, 0)) {
                 if(Mathf.Approximately(abilities.abilityCooldowns[0], 0)) {
                     GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
-                    ability.GetComponent<Ability>().player = gameObject;
+                    ability.GetComponent<Ability>().user = gameObject;
                     globalCD += globalCDValue;
                     abilities.abilityCooldowns[0] = ability.GetComponent<Ability>().cooldown;
                 }
             } else if(!abilityPrefab.GetComponent<Ability>().usesGlobalCD) {
                 if(Mathf.Approximately(abilities.abilityCooldowns[0], 0)) {
                     GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
-                    ability.GetComponent<Ability>().player = gameObject;
+                    ability.GetComponent<Ability>().user = gameObject;
                     abilities.abilityCooldowns[0] = ability.GetComponent<Ability>().cooldown;
                 }
             }
