@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 7266446974507202101}
   - component: {fileID: 7266446974507202100}
   - component: {fileID: 7266446974507202097}
+  - component: {fileID: -2625710723974166409}
+  - component: {fileID: 8859720044052144459}
   m_Layer: 0
   m_Name: BaseEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31333986197cd247bbb2e8fe7c039a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 5
 --- !u!143 &7266446974507202100
 CharacterController:
@@ -126,3 +129,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   player: {fileID: 0}
+--- !u!114 &-2625710723974166409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266446974507202094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b814c48e4e5ed24592d919324ba02c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  abilityCooldowns: []
+--- !u!114 &8859720044052144459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266446974507202094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45215d8b0007746c5acc68ead0f1b556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

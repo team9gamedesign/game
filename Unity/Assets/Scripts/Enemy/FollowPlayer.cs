@@ -5,7 +5,6 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     CharacterController characterController;
-    Animator myAnimator;
 
     public float speed = 3.0f;
 
@@ -15,7 +14,6 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
-        myAnimator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
     }
 
@@ -37,12 +35,6 @@ public class FollowPlayer : MonoBehaviour
         if(rotationVector != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(rotationVector);
-        }
-        
-        if(myAnimator != null)
-        {
-            Vector3 horizontalVelocity = new Vector3(characterController.velocity.x, 0 , characterController.velocity.z);
-            myAnimator.SetFloat("Speed", horizontalVelocity.magnitude);
         }
         characterController.Move(moveDirection * Time.deltaTime);
     }
