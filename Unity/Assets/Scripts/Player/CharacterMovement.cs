@@ -6,7 +6,7 @@ using System.Collections;
 public class CharacterMovement : MonoBehaviour
 {
     CharacterController characterController;
-
+    Animator animator;
     Stats stats;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         stats = GetComponent<Stats>();
     }
 
@@ -27,19 +28,47 @@ public class CharacterMovement : MonoBehaviour
 
     void UpdateMovement()
     {
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        //Movement
+        stats.gravity = characterController.isGrounded ? 0 : Mathf.Min(stats.gravity + 1, stats.maxGravity);
+
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), -stats.gravity, Input.GetAxis("Vertical"));
         moveDirection = moveDirection.normalized * stats.speed;
 
+        
+
+        //Rotation
         Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitFloor;
+        Vector3 playerToMouse = Vector3.zero;
 
         if(Physics.Raycast(cameraRay, out hitFloor))
         {
-            Vector3 playerToMouse = hitFloor.point - transform.position;
+            playerToMouse = hitFloor.point - transform.position;
             playerToMouse.y = 0;
             transform.rotation = Quaternion.LookRotation(playerToMouse);
         }
 
+        //Animation
+        if(animator != null)
+        {
+            if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0)
+            {
+                Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                float angle = Vector3.SignedAngle(movementInput, playerToMouse, Vector3.up);
+                animator.SetBool("MoveForward", -45 < angle && angle < 45);
+                animator.SetBool("MoveRight", -135 < angle && angle <= -45);
+                animator.SetBool("MoveLeft", 45 <= angle && angle < 135);
+                animator.SetBool("MoveBack", Mathf.Abs(angle) >= 135);
+            } else
+            {
+                animator.SetBool("MoveForward", false);
+                animator.SetBool("MoveRight", false);
+                animator.SetBool("MoveLeft", false);
+                animator.SetBool("MoveBack", false);
+            }
+        }
+
+        //Apply movement
         characterController.Move(moveDirection * Time.deltaTime);
     }
 }

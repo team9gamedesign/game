@@ -9,6 +9,11 @@ public class Stats : MonoBehaviour
     public float speed;
     public float globalCDValue;
 
+    public float maxGravity;
+    [HideInInspector]
+    public float gravity = 0;
+
+
     private void Start()
     {
         health = maxHealth;
