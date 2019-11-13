@@ -6,15 +6,25 @@ public class BerserkerAttackHandler : AttackHandler
 {
     float angerChangeTimer;
 
+    Animator animator;
+
     new void Start()
     {
         base.Start();
         angerChangeTimer = stats.angerIncreaseTime;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(stats.health <= 0)
+        {
+            animator.SetBool("Death", true);
+            return;
+        }
+
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
 
         //Phase handling
@@ -23,9 +33,9 @@ public class BerserkerAttackHandler : AttackHandler
             stats.berserkerMode = true;
             angerChangeTimer = stats.angerDecreaseTime;
 
-            stats.globalCDValue /= 2;
+            stats.globalCDValue /= 2; //TODO: This can cause rounding errors. Store values and multiply, then set back to values when going back to tank mode
             stats.speed *= 2;
-            GetComponent<Animator>().SetFloat("AnimatorSpeed", 2);
+            animator.SetFloat("AnimatorSpeed", 2);
         } else if(stats.anger == 0 && stats.berserkerMode)
         {
             stats.berserkerMode = false;
@@ -33,7 +43,7 @@ public class BerserkerAttackHandler : AttackHandler
 
             stats.globalCDValue *= 2;
             stats.speed /= 2;
-            GetComponent<Animator>().SetFloat("AnimatorSpeed", 1);
+            animator.SetFloat("AnimatorSpeed", 1);
         }
 
         if(stats.berserkerMode)
@@ -46,6 +56,17 @@ public class BerserkerAttackHandler : AttackHandler
             }
         } else
         {
+            //Go through damage taken since last frame and increase anger
+            foreach(float damage in stats.damageTaken)
+            {
+                stats.ChangeAnger((int)Mathf.Round(damage * 2));
+            }
+            if(stats.damageTaken.Count > 0)
+            {
+                animator.SetTrigger("Damaged");
+            }
+            stats.damageTaken.Clear();
+
             angerChangeTimer -= Time.deltaTime;
             if(angerChangeTimer <= 0)
             {

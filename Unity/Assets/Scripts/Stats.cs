@@ -23,13 +23,20 @@ public class Stats : MonoBehaviour
     public int angerIncreaseAmount;
     public float angerDecreaseTime;
     public int angerDecreaseAmount;
+    [HideInInspector]
+    public List<float> damageTaken;
 
     private void Start()
     {
         health = maxHealth;
+        damageTaken = new List<float>();
     }
 
     public void ChangeHealth(float value) {
+        if(value < 0)
+        {
+            damageTaken.Add(-value);
+        }
         health = Mathf.Clamp(health + value, 0, maxHealth);
     }
 
