@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSlashAbility : MonoBehaviour
+public class PommelAbility : MonoBehaviour
 {
     void Start() {
         Animator animator = GetComponent<Ability>().user.GetComponent<Animator>();
-        animator.SetBool("Slash", true);
+        animator.SetTrigger("Pommel");
         Destroy(gameObject);
     }
 }

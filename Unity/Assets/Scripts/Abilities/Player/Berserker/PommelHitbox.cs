@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSlashHitbox : MonoBehaviour
+public class PommelHitbox : MonoBehaviour
 {
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class PlayerSlashHitbox : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Stats>().ChangeHealth(-5);
+            other.GetComponent<Stats>().ChangeHealth(-damage);
         }
     }
 }

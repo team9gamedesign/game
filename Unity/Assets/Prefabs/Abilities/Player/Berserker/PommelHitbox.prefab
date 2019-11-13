@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 805727273928791332}
   - component: {fileID: 6802857618990778858}
-  - component: {fileID: 7544164698394485854}
+  - component: {fileID: -4448788163780014098}
   m_Layer: 0
-  m_Name: PlayerSlashHitbox
+  m_Name: PommelHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7544164698394485854
+--- !u!114 &-4448788163780014098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,6 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2688513901242306673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d77fb7e50bb542909fd7d2f3112f4f2, type: 3}
+  m_Script: {fileID: 11500000, guid: dd52aab3e2e0546f79064f90e4f384a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2

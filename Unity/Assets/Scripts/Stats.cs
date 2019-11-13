@@ -11,8 +11,18 @@ public class Stats : MonoBehaviour
 
     public float maxGravity;
     [HideInInspector]
-    public float gravity = 0;
+    public float gravity;
 
+    //Berserker stats
+    public int maxAnger;
+    [HideInInspector]
+    public int anger;
+    [HideInInspector]
+    public bool berserkerMode;
+    public float angerIncreaseTime;
+    public int angerIncreaseAmount;
+    public float angerDecreaseTime;
+    public int angerDecreaseAmount;
 
     private void Start()
     {
@@ -20,7 +30,11 @@ public class Stats : MonoBehaviour
     }
 
     public void ChangeHealth(float value) {
-        health += value;
-        health = Mathf.Clamp(health, 0, maxHealth);
+        health = Mathf.Clamp(health + value, 0, maxHealth);
+    }
+
+    public void ChangeAnger(int value)
+    {
+        anger = Mathf.Clamp(anger + value, 0, maxAnger);
     }
 }

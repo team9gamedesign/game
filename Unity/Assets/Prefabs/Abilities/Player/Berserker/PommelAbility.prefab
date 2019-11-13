@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4779434277191713387}
-  - component: {fileID: 5473271248740774558}
   - component: {fileID: 7003741624229218929}
+  - component: {fileID: 8523204143944509194}
   m_Layer: 0
-  m_Name: TestAbility
+  m_Name: PommelAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,18 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5473271248740774558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8680567473786358481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dce80cb43a3b364394959e2ad0ea7d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7003741624229218929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +47,17 @@ MonoBehaviour:
   usesGlobalCD: 1
   cooldown: 0
   user: {fileID: 0}
+  requiresBerserkerMode: 0
+  angerNeeded: 5
+--- !u!114 &8523204143944509194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680567473786358481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df67cc175f7a443b6aaa5d433d281794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
