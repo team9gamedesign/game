@@ -27,6 +27,15 @@ public class BerserkerAttackHandler : AttackHandler
 
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
 
+        if(stats.punchingBag)
+        {
+            stats.punchingBagTimer = Mathf.Max(0, stats.punchingBagTimer - Time.deltaTime);
+            if(stats.punchingBagTimer <= 0)
+            {
+                stats.punchingBag = false;
+            }
+        }
+
         //Phase handling
         if(stats.anger == stats.maxAnger && !stats.berserkerMode)
         {
@@ -59,7 +68,8 @@ public class BerserkerAttackHandler : AttackHandler
             //Go through damage taken since last frame and increase anger
             foreach(float damage in stats.damageTaken)
             {
-                stats.ChangeAnger((int)Mathf.Round(damage * 2));
+                int punchingBagAmount = stats.punchingBag ? stats.punchingBagAngerAmount : 0;
+                stats.ChangeAnger((int)Mathf.Round(damage * 2) + punchingBagAmount);
             }
             if(stats.damageTaken.Count > 0)
             {

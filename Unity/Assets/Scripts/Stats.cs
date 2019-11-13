@@ -25,6 +25,12 @@ public class Stats : MonoBehaviour
     public int angerDecreaseAmount;
     [HideInInspector]
     public List<float> damageTaken;
+    [HideInInspector]
+    public bool punchingBag;
+    [HideInInspector]
+    public float punchingBagTimer;
+    [HideInInspector]
+    public int punchingBagAngerAmount;
 
     private void Start()
     {
@@ -35,7 +41,14 @@ public class Stats : MonoBehaviour
     public void ChangeHealth(float value) {
         if(value < 0)
         {
-            damageTaken.Add(-value);
+            if(punchingBag && berserkerMode)
+            {
+                value = -value;
+            } else
+            {
+                damageTaken.Add(-value);
+            }
+            
         }
         health = Mathf.Clamp(health + value, 0, maxHealth);
     }
