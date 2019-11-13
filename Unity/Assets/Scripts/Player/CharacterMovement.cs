@@ -7,18 +7,19 @@ public class CharacterMovement : MonoBehaviour
 {
     CharacterController characterController;
 
-    public float speed = 6.0f;
+    Stats stats;
 
     private Vector3 moveDirection = Vector3.zero;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        stats = GetComponent<Stats>();
     }
 
     void Update()
     {
-        if(GetComponent<Stats>().health > 0)
+        if(stats.health > 0)
         {
             UpdateMovement();
         }
@@ -27,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
     void UpdateMovement()
     {
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-        moveDirection = moveDirection.normalized * speed;
+        moveDirection = moveDirection.normalized * stats.speed;
 
         Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitFloor;

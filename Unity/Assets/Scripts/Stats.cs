@@ -6,6 +6,8 @@ public class Stats : MonoBehaviour
 {
     public float maxHealth;
     public float health;
+    public float speed;
+    public float globalCDValue;
 
     private void Start()
     {

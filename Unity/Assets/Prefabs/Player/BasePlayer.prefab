@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a314c2fe0120a674c9ca43dd9d8c765a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
 --- !u!114 &3280400356125497943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 10
+  speed: 6
+  globalCDValue: 0.5
 --- !u!114 &3236091141547412714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalCD: 0
-  globalCDValue: 0.5
 --- !u!114 &5695191094779208846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,10 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b814c48e4e5ed24592d919324ba02c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilities:
-  - {fileID: 8680567473786358481, guid: 66ecd1ec812719343b70003701fc6b6c, type: 3}
-  - {fileID: 8680567473786358481, guid: 66ecd1ec812719343b70003701fc6b6c, type: 3}
-  - {fileID: 8428113620205778511, guid: 6913693db06ce4bcb9c6310f5d385d22, type: 3}
+  abilities: []
   abilityCooldowns: []
 --- !u!95 &29488464
 Animator:

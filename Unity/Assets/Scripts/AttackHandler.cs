@@ -5,15 +5,16 @@ using UnityEngine;
 public class AttackHandler : MonoBehaviour
 {
     Abilities abilities;
+    Stats stats;
 
     [HideInInspector]
     public float globalCD = 0;
-    public float globalCDValue = 1;
 
     // Start is called before the first frame update
     protected void Start()
     {
         abilities = GetComponent<Abilities>();
+        stats = GetComponent<Stats>();
     }
 
     protected void UseAbility(int abilityIndex)
@@ -25,7 +26,7 @@ public class AttackHandler : MonoBehaviour
             {
                 GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
                 ability.GetComponent<Ability>().user = gameObject;
-                globalCD += globalCDValue;
+                globalCD += stats.globalCDValue;
                 abilities.abilityCooldowns[abilityIndex] = ability.GetComponent<Ability>().cooldown;
             }
         }
