@@ -1,41 +1,79 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FollowPlayer : MonoBehaviour
 {
-    CharacterController characterController;
-
-    public float speed = 3.0f;
-
-    public GameObject player;
-
-    private Vector3 moveDirection = Vector3.zero;
+    private Animator anim;
+    private NavMeshAgent agent;
+    private Transform player;
+    private float playerRadius;
+    public float aggroRange = 10f;    
+    public bool shouldPatrol = true;
+    public Vector2 patrolDistance = new Vector2(5,5);
+    public float timeBetweenPatrols = 5f;
+    private float timeBetweenPatrolsTimer = 0;
+    private bool hasAggroed = false;
 
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        player = PlayerManager.instance.player.transform;
+        agent = GetComponent<NavMeshAgent>();
+        anim =  GetComponent<Animator>();
+        playerRadius = player.GetComponent<CharacterController>().radius;
     }
 
     void Update()
     {
-        if(player == null) {
-            player = GameObject.FindWithTag("Player"); //TODO: Fix so we don't look for tags
-        }
-        UpdateMovement();
+        Movement();
     }
 
-    void UpdateMovement()
+    void Movement()
     {
-        moveDirection = player.transform.position - transform.position;
-        moveDirection.y = 0;
-        moveDirection = moveDirection.normalized * speed;
-
-        Vector3 rotationVector = new Vector3(moveDirection.x, 0, moveDirection.z);
-        if(rotationVector != Vector3.zero)
+        if(anim)
         {
-            transform.rotation = Quaternion.LookRotation(rotationVector);
+            anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
         }
-        characterController.Move(moveDirection * Time.deltaTime);
+        
+        if(hasAggroed)
+        {
+            agent.SetDestination(player.position - (player.position - transform.position).normalized * (playerRadius + agent.radius));
+            Rotation();
+        }
+        else
+        {
+            float distance = Vector3.Distance(player.position, transform.position);
+            if(distance <= aggroRange)
+            {
+                hasAggroed = true;
+                agent.SetDestination(player.position - (player.position - transform.position).normalized * (playerRadius + agent.radius));
+            }
+            else if(shouldPatrol)
+            {
+                PatrolRandomly();
+            }
+        }
+    }
+
+    void Rotation()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    void PatrolRandomly()
+    {
+        if(!agent.hasPath)
+        {
+            timeBetweenPatrolsTimer -= Time.deltaTime;
+            if(timeBetweenPatrolsTimer < 0)
+            {
+                timeBetweenPatrolsTimer = timeBetweenPatrols;
+                agent.SetDestination(transform.position + new Vector3(Random.Range(-patrolDistance.x,patrolDistance.x), 0, Random.Range(-patrolDistance.y,patrolDistance.y)));
+            }
+        }
     }
 }
