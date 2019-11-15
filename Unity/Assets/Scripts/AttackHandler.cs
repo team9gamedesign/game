@@ -61,11 +61,15 @@ public class AttackHandler : MonoBehaviour
 
             GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
             ability.GetComponent<Ability>().user = gameObject;
-            if(abilityComponent.usesGlobalCD)
+
+            CountDown countDown = GameObject.Find("CountDownHandler").GetComponent<CountDown>();
+            if (abilityComponent.usesGlobalCD)
             {
-                globalCD += stats.globalCDValue;
+                globalCD = stats.globalCDValue;
+                countDown.CDSliders[abilityIndex].value = globalCD;
             }
             abilities.abilityCooldowns[abilityIndex] = ability.GetComponent<Ability>().cooldown;
+            countDown.CDSliders[abilityIndex].value = Mathf.Max(countDown.CDSliders[abilityIndex].value, ability.GetComponent<Ability>().cooldown);
         }
     }
 }

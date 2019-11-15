@@ -97,6 +97,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   health: 5
+  speed: 0
+  globalCDValue: 0
+  maxGravity: 0
+  gravity: 0
+  maxAnger: 0
+  anger: 0
+  berserkerMode: 0
+  angerIncreaseTime: 0
+  angerIncreaseAmount: 0
+  angerDecreaseTime: 0
+  angerDecreaseAmount: 0
+  damageTaken: []
+  punchingBag: 0
+  punchingBagTimer: 0
+  punchingBagAngerAmount: 0
 --- !u!143 &7266446974507202100
 CharacterController:
   m_ObjectHideFlags: 0
