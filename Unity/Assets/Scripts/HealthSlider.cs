@@ -10,6 +10,7 @@ public class HealthSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        healthBar = GameObject.Find("healthBarPlayer").GetComponent<Slider>(); //TODO: Fix
         healthBar.maxValue = GetComponent<Stats>().maxHealth;
         healthBar.value = GetComponent<Stats>().health;
     }
