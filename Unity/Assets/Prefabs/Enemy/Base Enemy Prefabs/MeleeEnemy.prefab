@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalCD: 0
-  globalCDValue: 1
 --- !u!1001 &6852174547800034827
 PrefabInstance:
   m_ObjectHideFlags: 0

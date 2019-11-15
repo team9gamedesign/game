@@ -6,14 +6,55 @@ public class Stats : MonoBehaviour
 {
     public float maxHealth;
     public float health;
+    public float speed;
+    public float globalCDValue;
+
+    public float maxGravity;
+    [HideInInspector]
+    public float gravity;
+
+    //Berserker stats
+    public int maxAnger;
+    [HideInInspector]
+    public int anger;
+    [HideInInspector]
+    public bool berserkerMode;
+    public float angerIncreaseTime;
+    public int angerIncreaseAmount;
+    public float angerDecreaseTime;
+    public int angerDecreaseAmount;
+    [HideInInspector]
+    public List<float> damageTaken;
+    [HideInInspector]
+    public bool punchingBag;
+    [HideInInspector]
+    public float punchingBagTimer;
+    [HideInInspector]
+    public int punchingBagAngerAmount;
 
     private void Start()
     {
         health = maxHealth;
+        damageTaken = new List<float>();
     }
 
     public void ChangeHealth(float value) {
-        health += value;
-        health = Mathf.Clamp(health, 0, maxHealth);
+        if(value < 0)
+        {
+            if(punchingBag && berserkerMode)
+            {
+                value = -value;
+            } else
+            {
+                damageTaken.Add(-value);
+            }
+            
+        }
+        health = Mathf.Clamp(health + value, 0, maxHealth);
+    }
+
+    public void ChangeAnger(int value)
+    {
+        anger = Mathf.Clamp(anger + value, 0, maxAnger);
     }
 }

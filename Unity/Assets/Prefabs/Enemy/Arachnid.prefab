@@ -67,6 +67,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: patrolDistance.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: patrolDistance.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: aggroRange
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: abilities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 4467885788258589445, guid: bdd8f4a7e539143f28b0006e343e8132,
+        type: 3}
     - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_BaseOffset
@@ -117,42 +158,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: maxHealth
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: health
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: patrolDistance.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: patrolDistance.y
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: abilities.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: abilities.Array.data[0]
-      value: 
-      objectReference: {fileID: 4467885788258589445, guid: bdd8f4a7e539143f28b0006e343e8132,
-        type: 3}
     - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Avatar

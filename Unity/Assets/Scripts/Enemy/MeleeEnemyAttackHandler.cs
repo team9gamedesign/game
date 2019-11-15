@@ -15,7 +15,7 @@ public class MeleeEnemyAttackHandler : AttackHandler
     void Update()
     {
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
-        if (Random.Range(0, 1) <= 0.1f && Vector3.Distance(transform.position, player.transform.position) <= 1.5f)
+        if (Random.Range(0, 1) <= 0.1f && Vector3.Distance(transform.position, player.transform.position) <= 2.5f)
         {
             UseAbility(0);
         }
