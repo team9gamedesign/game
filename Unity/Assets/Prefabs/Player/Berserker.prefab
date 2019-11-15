@@ -1674,6 +1674,19 @@ Transform:
   m_Father: {fileID: 6564304230020507810}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7580633753762340942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877462109158132768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea312b1a0e100948ab0d5a0b4b4df8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
 --- !u!114 &7862252799285379834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,7 +1703,7 @@ MonoBehaviour:
     type: 3}
   pommelHitbox: {fileID: 2688513901242306673, guid: 7c710c86fa02e4d7e94f20341be37604,
     type: 3}
---- !u!114 &-7580633753762340942
+--- !u!114 &-6931234417447371096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1699,10 +1712,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8877462109158132768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea312b1a0e100948ab0d5a0b4b4df8d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7245d90b96a4e4c6fb1969d78335ef39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  angerBar: {fileID: 0}
 --- !u!1 &8957410992291954034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1758,67 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Berserker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: abilities.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 8680567473786358481, guid: 66ecd1ec812719343b70003701fc6b6c,
+        type: 3}
+    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: abilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 505986600355539120, guid: 3cf22600ef5894403aec7deecea4949c,
+        type: 3}
+    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: abilities.Array.data[2]
+      value: 
+      objectReference: {fileID: 4743132893794655079, guid: 43f12d3683f884bedb999111323c923d,
+        type: 3}
+    - target: {fileID: 29488464, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: dc7098f7959157446869f5b516bf11c6, type: 3}
+    - target: {fileID: 29488464, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8ebf26710fa26461ca2dc0d941142fab, type: 2}
+    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: maxGravity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: maxAnger
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: angerIncreaseTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: angerIncreaseAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: angerDecreaseAmount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: angerDecreaseTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4426969896390083613, guid: 1ae09700559cac947b74acdf1799c4c7,
         type: 3}
@@ -1816,67 +1890,6 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: maxGravity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: maxAnger
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: angerIncreaseTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: angerIncreaseAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: angerDecreaseAmount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280400356125497943, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: angerDecreaseTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: abilities.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: abilities.Array.data[0]
-      value: 
-      objectReference: {fileID: 8680567473786358481, guid: 66ecd1ec812719343b70003701fc6b6c,
-        type: 3}
-    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: abilities.Array.data[1]
-      value: 
-      objectReference: {fileID: 505986600355539120, guid: 3cf22600ef5894403aec7deecea4949c,
-        type: 3}
-    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
-        type: 3}
-      propertyPath: abilities.Array.data[2]
-      value: 
-      objectReference: {fileID: 4743132893794655079, guid: 43f12d3683f884bedb999111323c923d,
-        type: 3}
-    - target: {fileID: 29488464, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: dc7098f7959157446869f5b516bf11c6, type: 3}
-    - target: {fileID: 29488464, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8ebf26710fa26461ca2dc0d941142fab, type: 2}
     m_RemovedComponents:
     - {fileID: 4426969896390083610, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
     - {fileID: 4426969896390083611, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}

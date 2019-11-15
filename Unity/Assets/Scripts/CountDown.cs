@@ -12,17 +12,33 @@ public class CountDown : MonoBehaviour
     public Slider CDSliderLM;
     public Slider CDSliderRM;
 
+    public List<Slider> CDSliders;
+
     float CoolDown = 2; //TODO: Reference properly
 
     // Start is called before the first frame update
     void Start()
     {
-        CDSlider1.maxValue = CoolDown; // GetComponent<PlayerAttackHandler>().GlobalCDValue;
+        List<GameObject> abilities = GameObject.FindWithTag("Player").GetComponent<Abilities>().abilities;
+        List<float> cooldowns = new List<float>();
+        for(int i = 0; i < abilities.Count; ++i)
+        {
+            Ability abilityComponent = abilities[i].GetComponent<Ability>();
+            if(abilityComponent.usesGlobalCD)
+            {
+                cooldowns.Add(GameObject.FindWithTag("Player").GetComponent<Stats>().globalCDValue);
+                cooldowns[i] = Mathf.Max(cooldowns[i], abilityComponent.cooldown);
+            } else
+            {
+                cooldowns.Add(abilityComponent.cooldown);
+            }
+        }
+        CDSlider1.maxValue = cooldowns[2];
         CDSlider2.maxValue = CoolDown;
         CDSlider3.maxValue = CoolDown;
         CDSlider4.maxValue = CoolDown;
-        CDSliderLM.maxValue = CoolDown;
-        CDSliderRM.maxValue = CoolDown;
+        CDSliderLM.maxValue = cooldowns[0];
+        CDSliderRM.maxValue = cooldowns[1];
 
         CDSlider1.value = 0;
         CDSlider2.value = CoolDown;
@@ -35,35 +51,6 @@ public class CountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Mouse0 = left mouse button
-        //Mouse1 = right mouse button
-        //Alpha1-4 or Keypad1-4
-
-        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && CDSlider1.value == 0)
-        {
-            CDSlider1.value = CoolDown;
-        }
-        else if ((Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2)) && CDSlider2.value == 0)
-        {
-            CDSlider2.value = CoolDown;
-        }
-        else if ((Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3)) && CDSlider3.value == 0)
-        {
-            CDSlider3.value = CoolDown;
-        }
-        else if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4)) && CDSlider4.value == 0)
-        {
-            CDSlider4.value = CoolDown;
-        }
-        else if ((Input.GetKeyDown(KeyCode.Mouse0) && CDSliderLM.value == 0))
-        {
-            CDSliderLM.value = CoolDown;
-        }
-        else if ((Input.GetKeyDown(KeyCode.Mouse1) && CDSliderRM.value == 0))
-        {
-            CDSliderRM.value = CoolDown;
-        }
-
         if (CDSlider1.value > 0)
         {
             CDSlider1.value -= Time.deltaTime;

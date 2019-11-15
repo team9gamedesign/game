@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7266446974507202097}
   - component: {fileID: -2625710723974166409}
   - component: {fileID: 8859720044052144459}
-  - component: {fileID: -4338698558483898830}
   m_Layer: 0
   m_Name: BaseEnemy
   m_TagString: Enemy
@@ -98,6 +97,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   health: 5
+  speed: 0
+  globalCDValue: 0
+  maxGravity: 0
+  gravity: 0
+  maxAnger: 0
+  anger: 0
+  berserkerMode: 0
+  angerIncreaseTime: 0
+  angerIncreaseAmount: 0
+  angerDecreaseTime: 0
+  angerDecreaseAmount: 0
+  damageTaken: []
+  punchingBag: 0
+  punchingBagTimer: 0
+  punchingBagAngerAmount: 0
 --- !u!143 &7266446974507202100
 CharacterController:
   m_ObjectHideFlags: 0
@@ -156,16 +170,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45215d8b0007746c5acc68ead0f1b556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-4338698558483898830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7266446974507202094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea312b1a0e100948ab0d5a0b4b4df8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealthBar: {fileID: 0}
