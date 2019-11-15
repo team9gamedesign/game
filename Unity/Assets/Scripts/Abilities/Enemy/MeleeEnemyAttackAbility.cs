@@ -7,7 +7,7 @@ public class MeleeEnemyAttackAbility : MonoBehaviour
     void Start()
     {
         Animator enemyAnimator = GetComponent<Ability>().user.GetComponent<Animator>();
-        enemyAnimator.SetBool("Attack", true);
+        enemyAnimator.SetTrigger("Attack");
         Destroy(gameObject);
     }
 }
