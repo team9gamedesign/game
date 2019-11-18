@@ -75,7 +75,6 @@ public class BerserkerAttackHandler : AttackHandler
             {
                 animator.SetTrigger("Damaged");
             }
-            stats.damageTaken.Clear();
 
             angerChangeTimer -= Time.deltaTime;
             if(angerChangeTimer <= 0)
@@ -84,9 +83,10 @@ public class BerserkerAttackHandler : AttackHandler
                 stats.ChangeAnger(stats.angerIncreaseAmount);
             }
         }
+        stats.damageTaken.Clear(); //Clear damage taken each frame regardless of phase
 
         //Ability handling
-        if(Input.GetKey(KeyCode.Alpha1)) { //Button 1
+        if (Input.GetKey(KeyCode.Alpha1)) { //Button 1
             UseAbility(2);
         }
         if(Input.GetKey(KeyCode.Alpha2)) { //Button 2
