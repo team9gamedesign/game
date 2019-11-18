@@ -37,6 +37,10 @@ public class Stats : MonoBehaviour
     public float bullRushTimer;
     public float bullRushSpeedFactor;
     public float bullRushDamage;
+    [HideInInspector]
+    public bool blocking;
+    [HideInInspector]
+    public int blockAmount;
 
     private void Start()
     {
@@ -47,10 +51,17 @@ public class Stats : MonoBehaviour
     public void ChangeHealth(float value) {
         if(value < 0)
         {
-            if(punchingBag && berserkerMode)
+            if (punchingBag && berserkerMode)
             {
                 value = -value;
-            } else
+            }
+            else if (blocking && blockAmount > 0)
+            {
+                value = -value;
+                blockAmount--;
+                blocking = blockAmount != 0;
+            }
+            else
             {
                 damageTaken.Add(-value);
             }

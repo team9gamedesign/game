@@ -35,14 +35,14 @@ public class CountDown : MonoBehaviour
         }
         CDSlider1.maxValue = cooldowns[2];
         CDSlider2.maxValue = cooldowns[3];
-        CDSlider3.maxValue = CoolDown;
+        CDSlider3.maxValue = cooldowns[4];
         CDSlider4.maxValue = CoolDown;
         CDSliderLM.maxValue = cooldowns[0];
         CDSliderRM.maxValue = cooldowns[1];
 
         CDSlider1.value = 0;
         CDSlider2.value = 0;
-        CDSlider3.value = CoolDown;
+        CDSlider3.value = 0;
         CDSlider4.value = CoolDown;
         CDSliderLM.value = 0;
         CDSliderRM.value = 0;
@@ -59,11 +59,11 @@ public class CountDown : MonoBehaviour
         {
             CDSlider2.value -= Time.deltaTime;
         }
-        /*if (CDSlider3.value > 0)
+        if (CDSlider3.value > 0)
         {
             CDSlider3.value -= Time.deltaTime;
         }
-        if (CDSlider4.value > 0)
+        /*if (CDSlider4.value > 0)
         {
             CDSlider4.value -= Time.deltaTime;
         }*/
