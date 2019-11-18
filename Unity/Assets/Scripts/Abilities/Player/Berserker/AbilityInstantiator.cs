@@ -12,7 +12,7 @@ public class AbilityInstantiator : MonoBehaviour
         Instantiate(earthShatter, transform.position, transform.rotation);
         Follow cameraFollow = Camera.main.GetComponent<Follow>();
         cameraFollow.shake = true;
-        cameraFollow.shakeTimer = 0.2f;
+        cameraFollow.shakeTimer = 0.3f;
     }
 
     public void InstantiatePommelHitbox()
