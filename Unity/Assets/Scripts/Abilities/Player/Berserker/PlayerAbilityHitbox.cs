@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PommelHitbox : MonoBehaviour
+public class PlayerAbilityHitbox : MonoBehaviour
 {
     public float damage;
     // Start is called before the first frame update

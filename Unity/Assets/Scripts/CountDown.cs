@@ -14,8 +14,6 @@ public class CountDown : MonoBehaviour
 
     public List<Slider> CDSliders;
 
-    float CoolDown = 2; //TODO: Reference properly
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +34,14 @@ public class CountDown : MonoBehaviour
         CDSlider1.maxValue = cooldowns[2];
         CDSlider2.maxValue = cooldowns[3];
         CDSlider3.maxValue = cooldowns[4];
-        CDSlider4.maxValue = CoolDown;
+        CDSlider4.maxValue = cooldowns[5];
         CDSliderLM.maxValue = cooldowns[0];
         CDSliderRM.maxValue = cooldowns[1];
 
         CDSlider1.value = 0;
         CDSlider2.value = 0;
         CDSlider3.value = 0;
-        CDSlider4.value = CoolDown;
+        CDSlider4.value = 0;
         CDSliderLM.value = 0;
         CDSliderRM.value = 0;
     }
@@ -63,10 +61,10 @@ public class CountDown : MonoBehaviour
         {
             CDSlider3.value -= Time.deltaTime;
         }
-        /*if (CDSlider4.value > 0)
+        if (CDSlider4.value > 0)
         {
             CDSlider4.value -= Time.deltaTime;
-        }*/
+        }
         if (CDSliderLM.value > 0)
         {
             CDSliderLM.value -= Time.deltaTime;

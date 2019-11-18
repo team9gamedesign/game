@@ -44,6 +44,8 @@ MonoBehaviour:
     type: 3}
   bullRushDust: {fileID: 9124305589550347083, guid: fe06a50de556941cdbfbaf05655df45a,
     type: 3}
+  kickHitbox: {fileID: 2379135873952524595, guid: bb85aeec6e9124edc8a57f22026e9e8d,
+    type: 3}
 --- !u!1001 &1387490044255296215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
         type: 3}
       propertyPath: abilities.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
         type: 3}
@@ -160,6 +162,12 @@ PrefabInstance:
       propertyPath: abilities.Array.data[4]
       value: 
       objectReference: {fileID: 45588333870885450, guid: ed516fef37e9b46cbaa08900acab93cf,
+        type: 3}
+    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: abilities.Array.data[5]
+      value: 
+      objectReference: {fileID: 4395798732690382069, guid: 807a961087b3f44f7a2c357e1649c4cc,
         type: 3}
     - target: {fileID: 29488464, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
       propertyPath: m_Avatar
