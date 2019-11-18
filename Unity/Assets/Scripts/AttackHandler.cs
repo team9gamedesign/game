@@ -62,7 +62,7 @@ public class AttackHandler : MonoBehaviour
             GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
             ability.GetComponent<Ability>().user = gameObject;
 
-            CountDown countDown = GameObject.Find("CountDownHandler").GetComponent<CountDown>();
+            CountDown countDown = GameObject.Find("CountDownHandler").GetComponent<CountDown>(); //TODO: This causes a bug when enemies use it. Remove and put somewhere else!
             if (abilityComponent.usesGlobalCD)
             {
                 globalCD = stats.globalCDValue;

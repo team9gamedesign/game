@@ -31,6 +31,12 @@ public class Stats : MonoBehaviour
     public float punchingBagTimer;
     [HideInInspector]
     public int punchingBagAngerAmount;
+    [HideInInspector]
+    public bool bullRush;
+    [HideInInspector]
+    public float bullRushTimer;
+    public float bullRushSpeedFactor;
+    public float bullRushDamage;
 
     private void Start()
     {
