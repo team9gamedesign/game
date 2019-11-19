@@ -8,6 +8,12 @@ public class GunMageAbilityInstantiator : MonoBehaviour
     public float shootRange;
     public float shootDamage;
     public int shootHeat;
+    public GameObject barrier;
+
+    public void InstantiateBarrier()
+    {
+        Instantiate(barrier, transform.position, Quaternion.identity);
+    }
 
     public void InstantiateShot()
     {

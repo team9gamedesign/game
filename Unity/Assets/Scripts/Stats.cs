@@ -36,6 +36,8 @@ public class Stats : MonoBehaviour
     public int maxHeat;
     [HideInInspector]
     public int heat;
+    [HideInInspector]
+    public bool barrier;
 
     private void Start()
     {
@@ -46,6 +48,11 @@ public class Stats : MonoBehaviour
     public void ChangeHealth(float value) {
         if(value < 0)
         {
+            if(barrier)
+            {
+                return;
+            }
+
             if(punchingBag && berserkerMode)
             {
                 value = -value;

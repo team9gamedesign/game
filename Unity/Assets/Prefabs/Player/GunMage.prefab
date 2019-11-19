@@ -29,6 +29,7 @@ MonoBehaviour:
   shootRange: 20
   shootDamage: 1
   shootHeat: 1
+  barrier: {fileID: 3444321634021397731, guid: 5347fe0dd694e40cfa5b8331b3055e6b, type: 3}
 --- !u!114 &-1578356890361681121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,13 +323,19 @@ PrefabInstance:
     - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
         type: 3}
       propertyPath: abilities.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
         type: 3}
       propertyPath: abilities.Array.data[0]
       value: 
       objectReference: {fileID: 1030319357199089043, guid: 03c038ddfdfbb4aa49f1dea406b38de4,
+        type: 3}
+    - target: {fileID: 5695191094779208846, guid: 1ae09700559cac947b74acdf1799c4c7,
+        type: 3}
+      propertyPath: abilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 1961286763874387004, guid: 54e06eb5c9eb741679228af38382ccee,
         type: 3}
     - target: {fileID: 29488464, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}
       propertyPath: m_Avatar
