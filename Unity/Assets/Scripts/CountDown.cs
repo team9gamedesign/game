@@ -33,12 +33,12 @@ public class CountDown : MonoBehaviour
                 cooldowns.Add(abilityComponent.cooldown);
             }
         }
-        CDSlider1.maxValue = cooldowns[2];
+        CDSlider1.maxValue = CoolDown;
         CDSlider2.maxValue = CoolDown;
         CDSlider3.maxValue = CoolDown;
         CDSlider4.maxValue = CoolDown;
         CDSliderLM.maxValue = cooldowns[0];
-        CDSliderRM.maxValue = cooldowns[1];
+        CDSliderRM.maxValue = CoolDown;
 
         CDSlider1.value = 0;
         CDSlider2.value = CoolDown;

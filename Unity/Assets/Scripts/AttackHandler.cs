@@ -59,6 +59,16 @@ public class AttackHandler : MonoBehaviour
                 }
             }
 
+            //Check if heat is needed
+            if(abilityComponent.heatNeeded > 0)
+            {
+                if(stats.heat < abilityComponent.heatNeeded)
+                {
+                    return;
+                }
+                stats.ChangeHeat(-abilityComponent.heatNeeded);
+            }
+
             GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
             ability.GetComponent<Ability>().user = gameObject;
 

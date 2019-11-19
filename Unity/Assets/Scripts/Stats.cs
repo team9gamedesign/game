@@ -32,6 +32,11 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public int punchingBagAngerAmount;
 
+    //Gun Mage stats
+    public int maxHeat;
+    [HideInInspector]
+    public int heat;
+
     private void Start()
     {
         health = maxHealth;
@@ -56,5 +61,10 @@ public class Stats : MonoBehaviour
     public void ChangeAnger(int value)
     {
         anger = Mathf.Clamp(anger + value, 0, maxAnger);
+    }
+
+    public void ChangeHeat(int value)
+    {
+        heat = Mathf.Clamp(heat + value, 0, maxHeat);
     }
 }
