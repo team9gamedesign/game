@@ -5,16 +5,16 @@ using UnityEngine;
 public class IcePatch : MonoBehaviour
 {
     public float aliveTime;
-
+    private float aliveTimer;
 
     private Vector3 maxSize;
 
     // Start is called before the first frame update
     void Start()
     {
+        aliveTimer = aliveTime;
         maxSize = transform.localScale;
         transform.localScale = new Vector3(0.1f, transform.localScale.y, 0.1f);
-        Destroy(gameObject, aliveTime);
     }
 
     void Update()
@@ -29,7 +29,22 @@ public class IcePatch : MonoBehaviour
                 transform.localScale.y,
                 Mathf.Lerp(transform.localScale.z, maxSize.z, 0.25f)
             );
-        }   
+        }
+
+        aliveTimer -= Time.deltaTime;
+        if(aliveTimer <= 0)
+        {
+            transform.localScale = new Vector3(
+                Mathf.Lerp(transform.localScale.x, 0, 0.25f),
+                Mathf.Lerp(transform.localScale.y, 0, 0.25f),
+                Mathf.Lerp(transform.localScale.z, 0, 0.25f)
+            );
+
+            if(transform.localScale.magnitude <= 0.01f)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
