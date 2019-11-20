@@ -9,10 +9,21 @@ public class GunMageAbilityInstantiator : MonoBehaviour
     public float shootDamage;
     public int shootHeat;
     public GameObject barrier;
+    public GameObject icePatch;
 
     public void InstantiateBarrier()
     {
         Instantiate(barrier, transform.position, Quaternion.identity);
+    }
+
+    public void InstantiateIcePatch()
+    {
+        Vector3 transformGround = new Vector3(
+            transform.position.x,
+            0,
+            transform.position.z
+        );
+        Instantiate(icePatch, transformGround, Quaternion.identity);
     }
 
     public void InstantiateShot()
