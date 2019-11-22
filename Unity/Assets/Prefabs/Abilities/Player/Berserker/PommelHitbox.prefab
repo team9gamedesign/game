@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 805727273928791332}
   - component: {fileID: 6802857618990778858}
-  - component: {fileID: -4448788163780014098}
+  - component: {fileID: 2032613653668710161}
   m_Layer: 0
   m_Name: PommelHitbox
   m_TagString: Untagged
@@ -45,7 +45,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4448788163780014098
+--- !u!114 &2032613653668710161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2688513901242306673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd52aab3e2e0546f79064f90e4f384a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5266036624f8347d2a2b01ccce689d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 5
