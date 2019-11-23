@@ -31,6 +31,16 @@ public class Stats : MonoBehaviour
     public float punchingBagTimer;
     [HideInInspector]
     public int punchingBagAngerAmount;
+    [HideInInspector]
+    public bool bullRush;
+    [HideInInspector]
+    public float bullRushTimer;
+    public float bullRushSpeedFactor;
+    public float bullRushDamage;
+    [HideInInspector]
+    public bool blocking;
+    [HideInInspector]
+    public int blockAmount;
 
     //Gun Mage stats
     public int maxHeat;
@@ -56,7 +66,14 @@ public class Stats : MonoBehaviour
             if(punchingBag && berserkerMode)
             {
                 value = -value;
-            } else
+            }
+            else if (blocking && blockAmount > 0)
+            {
+                value = -value;
+                blockAmount--;
+                blocking = blockAmount != 0;
+            }
+            else
             {
                 damageTaken.Add(-value);
             }
