@@ -40,5 +40,7 @@ public class AbilityInstantiator : MonoBehaviour
     {
         float zDistance = kickHitbox.GetComponent<BoxCollider>().size.z;
         Instantiate(kickHitbox, transform.position + zDistance/2 * transform.forward, transform.rotation);
+        Animator animator = GetComponent<Animator>();
+        animator.SetInteger("Kick", animator.GetInteger("Kick") - 1);
     }
 }
