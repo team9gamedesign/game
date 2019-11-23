@@ -23,30 +23,33 @@ public class GunMageAttackHandler : AttackHandler
 
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
 
-        //Ability handling
-        if (Input.GetKey(KeyCode.Alpha1))
-        { //Button 1
-            UseAbility(2);
-        }
-        if (Input.GetKey(KeyCode.Alpha2))
-        { //Button 2
-            UseAbility(3);
-        }
-        if (Input.GetKey(KeyCode.Alpha3))
-        { //Button 3
-            UseAbility(4);
-        }
-        if (Input.GetKey(KeyCode.Alpha4))
-        { //Button 4
-            UseAbility(5);
-        }
-        if (Input.GetMouseButton(1))
-        { //Right mouse button
-            UseAbility(1);
-        }
-        if (Input.GetMouseButton(0))
-        { //Left mouse button
-            UseAbility(0);
+        if(!stats.laser)
+        {
+            //Ability handling
+            if (Input.GetKey(KeyCode.Alpha1))
+            { //Button 1
+                UseAbility(2);
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            { //Button 2
+                UseAbility(3);
+            }
+            if (Input.GetKey(KeyCode.Alpha3))
+            { //Button 3
+                UseAbility(4);
+            }
+            if (Input.GetKey(KeyCode.Alpha4))
+            { //Button 4
+                UseAbility(5);
+            }
+            if (Input.GetMouseButton(1))
+            { //Right mouse button
+                UseAbility(1);
+            }
+            if (Input.GetMouseButton(0))
+            { //Left mouse button
+                UseAbility(0);
+            }
         }
     }
 }

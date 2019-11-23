@@ -48,6 +48,8 @@ public class Stats : MonoBehaviour
     public int heat;
     [HideInInspector]
     public bool barrier;
+    [HideInInspector]
+    public bool laser;
 
     private void Start()
     {
