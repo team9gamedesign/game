@@ -27,6 +27,8 @@ public class AbilityInstantiator : MonoBehaviour
         Stats stats = GetComponent<Stats>();
         stats.bullRush = true;
         stats.bullRushTimer = 0.3f;
+        Animator animator = GetComponent<Animator>();
+        animator.SetInteger("BullRush", animator.GetInteger("BullRush") - 1);
         Instantiate(bullRushDust, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
     }
 

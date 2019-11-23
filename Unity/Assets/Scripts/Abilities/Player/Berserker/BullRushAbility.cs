@@ -8,7 +8,9 @@ public class BullRushAbility : MonoBehaviour
     void Start()
     {
         Animator animator = GetComponent<Ability>().user.GetComponent<Animator>();
-        animator.SetTrigger("BullRush");
+        Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
+        animator.SetInteger("BullRush", stats.doubleUpFactor);
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }

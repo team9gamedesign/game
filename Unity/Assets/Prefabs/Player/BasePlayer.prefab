@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3236091141547412714}
   - component: {fileID: 5695191094779208846}
   - component: {fileID: 29488464}
+  - component: {fileID: -245949176174201056}
   m_Layer: 0
   m_Name: BasePlayer
   m_TagString: Player
@@ -130,6 +131,25 @@ MonoBehaviour:
   health: 10
   speed: 6
   globalCDValue: 0.5
+  maxGravity: 0
+  gravity: 0
+  maxAnger: 0
+  anger: 0
+  berserkerMode: 0
+  angerIncreaseTime: 0
+  angerIncreaseAmount: 0
+  angerDecreaseTime: 0
+  angerDecreaseAmount: 0
+  damageTaken: []
+  punchingBag: 0
+  punchingBagTimer: 0
+  punchingBagAngerAmount: 0
+  bullRush: 0
+  bullRushTimer: 0
+  bullRushSpeedFactor: 0
+  bullRushDamage: 0
+  blocking: 0
+  blockAmount: 0
 --- !u!114 &3236091141547412714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +196,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-245949176174201056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426969896390083590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b2dbf6e046141e7badb054f01d2729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QKeyCombination: {fileID: 0}
+  EKeyCombination: {fileID: 0}

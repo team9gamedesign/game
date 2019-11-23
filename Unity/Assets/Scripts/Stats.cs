@@ -42,6 +42,10 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public int blockAmount;
 
+    //Combinations
+    [HideInInspector]
+    public int doubleUpFactor = 1;
+
     private void Start()
     {
         health = maxHealth;
