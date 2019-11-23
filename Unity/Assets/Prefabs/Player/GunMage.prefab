@@ -32,6 +32,8 @@ MonoBehaviour:
   barrier: {fileID: 3444321634021397731, guid: 5347fe0dd694e40cfa5b8331b3055e6b, type: 3}
   icePatch: {fileID: 8312391466781705133, guid: 7de6dd00fcc164bbda628b8eb5083c4b,
     type: 3}
+  fireBall: {fileID: 3481695838322412780, guid: a4832bf69efe448bfb39eb97a855ec4e,
+    type: 3}
 --- !u!114 &-1578356890361681121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +456,7 @@ PrefabInstance:
         type: 3}
       propertyPath: abilities.Array.data[5]
       value: 
-      objectReference: {fileID: 500137292851453663, guid: b5835bdd39ca14ddd8dd5d015900b7ec,
+      objectReference: {fileID: 1843621413003085885, guid: 72d769f002194494eb29b2ebf1eb162e,
         type: 3}
     m_RemovedComponents:
     - {fileID: 4426969896390083610, guid: 1ae09700559cac947b74acdf1799c4c7, type: 3}

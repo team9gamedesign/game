@@ -2753,6 +2753,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8555664780242076382, guid: 7a61de4507f6e417c93e88cc2b7da7af,
+        type: 3}
+      propertyPath: abilities.Array.data[5]
+      value: 
+      objectReference: {fileID: 1843621413003085885, guid: 72d769f002194494eb29b2ebf1eb162e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a61de4507f6e417c93e88cc2b7da7af, type: 3}
 --- !u!1 &1177166425
@@ -4830,17 +4836,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bb35be490b38fd243aeaabe88c3147d8,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bb35be490b38fd243aeaabe88c3147d8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bb35be490b38fd243aeaabe88c3147d8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bb35be490b38fd243aeaabe88c3147d8,
         type: 3}

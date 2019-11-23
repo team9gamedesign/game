@@ -10,6 +10,7 @@ public class GunMageAbilityInstantiator : MonoBehaviour
     public int shootHeat;
     public GameObject barrier;
     public GameObject icePatch;
+    public GameObject fireBall;
 
     public void InstantiateBarrier()
     {
@@ -48,8 +49,11 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         {
             shotLine.SetPosition(1, rayOrigin + transform.forward * shootRange);
         }
+    }
 
-        
+    public void InstantiateFireBall()
+    {
+        Instantiate(fireBall, gunEnd.transform.position, transform.rotation);
     }
 
     private IEnumerator RenderShot()
