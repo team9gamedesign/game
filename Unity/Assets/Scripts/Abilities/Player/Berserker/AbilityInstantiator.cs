@@ -22,6 +22,8 @@ public class AbilityInstantiator : MonoBehaviour
     public void InstantiatePommelHitbox()
     {
         Instantiate(pommelHitbox, transform.position + transform.forward, transform.rotation);
+        Animator animator = GetComponent<Animator>();
+        animator.SetInteger("Pommel", animator.GetInteger("Pommel") - 1);
     }
 
     public void StartBullRush()
