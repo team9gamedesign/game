@@ -42,6 +42,15 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public int blockAmount;
 
+    //Gun Mage stats
+    public int maxHeat;
+    [HideInInspector]
+    public int heat;
+    [HideInInspector]
+    public bool barrier;
+    [HideInInspector]
+    public bool laser;
+
     private void Start()
     {
         health = maxHealth;
@@ -51,7 +60,12 @@ public class Stats : MonoBehaviour
     public void ChangeHealth(float value) {
         if(value < 0)
         {
-            if (punchingBag && berserkerMode)
+            if(barrier)
+            {
+                return;
+            }
+
+            if(punchingBag && berserkerMode)
             {
                 value = -value;
             }
@@ -73,5 +87,10 @@ public class Stats : MonoBehaviour
     public void ChangeAnger(int value)
     {
         anger = Mathf.Clamp(anger + value, 0, maxAnger);
+    }
+
+    public void ChangeHeat(int value)
+    {
+        heat = Mathf.Clamp(heat + value, 0, maxHeat);
     }
 }
