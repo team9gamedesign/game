@@ -11,4 +11,6 @@ public class Ability : MonoBehaviour
 
     public bool requiresBerserkerMode;
     public int angerNeeded;
+
+    public int heatNeeded;
 }
