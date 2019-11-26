@@ -11,7 +11,8 @@ public class CauterizeAbility : MonoBehaviour
         Animator animator = GetComponent<Ability>().user.GetComponent<Animator>();
         animator.SetTrigger("Cauterize");
         Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
-        stats.ChangeHealth(healAmount);
+        stats.ChangeHealth(healAmount * stats.doubleUpFactor);
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }
