@@ -21,7 +21,9 @@ public class GunMageAbilityInstantiator : MonoBehaviour
 
     public void InstantiateBarrier()
     {
-        Instantiate(barrier, transform.position, Quaternion.identity);
+        GameObject barrierObject = Instantiate(barrier, transform.position, Quaternion.identity);
+        barrierObject.GetComponent<Barrier>().aliveTime *= stats.doubleUpFactor;
+        stats.doubleUpFactor = 1;
     }
 
     public void InstantiateIcePatch()
