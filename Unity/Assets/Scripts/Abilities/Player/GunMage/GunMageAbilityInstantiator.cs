@@ -12,6 +12,13 @@ public class GunMageAbilityInstantiator : MonoBehaviour
     public GameObject icePatch;
     public GameObject fireBall;
 
+    private Stats stats;
+
+    void Start()
+    {
+        stats = GetComponent<Stats>();
+    }
+
     public void InstantiateBarrier()
     {
         Instantiate(barrier, transform.position, Quaternion.identity);
@@ -24,7 +31,9 @@ public class GunMageAbilityInstantiator : MonoBehaviour
             0,
             transform.position.z
         );
-        Instantiate(icePatch, transformGround, Quaternion.identity);
+        GameObject icePatchObject = Instantiate(icePatch, transformGround, Quaternion.identity);
+        icePatchObject.GetComponent<IcePatch>().maxSize *= stats.doubleUpFactor;
+        stats.doubleUpFactor = 1;
     }
 
     public void InstantiateShot()
