@@ -62,6 +62,13 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         }
     }
 
+    public void InstantiateLastShot()
+    {
+        Animator animator = GetComponent<Animator>();
+        animator.SetInteger("Shoot", animator.GetInteger("Shoot") - 1);
+        InstantiateShot();
+    }
+
     public void InstantiateFireBall()
     {
         Instantiate(fireBall, gunEnd.transform.position, transform.rotation);
