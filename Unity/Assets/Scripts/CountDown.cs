@@ -5,73 +5,122 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
-    public Slider CDSlider1;
-    public Slider CDSlider2;
-    public Slider CDSlider3;
-    public Slider CDSlider4;
-    public Slider CDSliderLM;
-    public Slider CDSliderRM;
+    public Image CDLM; 
+    public Image CDRM;
+    public Image CD1;
+    public Image CD2;
+    public Image CD3;
+    public Image CD4;
+        
+    float CDLM_max;
+    float CDRM_max;
+    float CD1_max;
+    float CD2_max;
+    float CD3_max;
+    float CD4_max;
 
-    public List<Slider> CDSliders;
+    float CDLM_current;
+    float CDRM_current;
+    float CD1_current;
+    float CD2_current;
+    float CD3_current;
+    float CD4_current;
+
+    public List<float> currentCooldowns;
+    public List<bool> usesGlobalCD;
 
     // Start is called before the first frame update
     void Start()
     {
-        List<GameObject> abilities = GameObject.FindWithTag("Player").GetComponent<Abilities>().abilities;
-        List<float> cooldowns = new List<float>();
+        List<GameObject> abilities = PlayerManager.instance.player.GetComponent<Abilities>().abilities;
+        List<float> cooldownsMax = new List<float>();
+        usesGlobalCD = new List<bool>();
+
         for(int i = 0; i < abilities.Count; ++i)
         {
             Ability abilityComponent = abilities[i].GetComponent<Ability>();
             if(abilityComponent.usesGlobalCD)
             {
-                cooldowns.Add(GameObject.FindWithTag("Player").GetComponent<Stats>().globalCDValue);
-                cooldowns[i] = Mathf.Max(cooldowns[i], abilityComponent.cooldown);
+                cooldownsMax.Add(PlayerManager.instance.player.GetComponent<Stats>().globalCDValue);
+                cooldownsMax[i] = Mathf.Max(cooldownsMax[i], abilityComponent.cooldown);
+                usesGlobalCD.Add(true);
             } else
             {
-                cooldowns.Add(abilityComponent.cooldown);
+                cooldownsMax.Add(abilityComponent.cooldown);
+                usesGlobalCD.Add(false);
             }
         }
-        CDSlider1.maxValue = cooldowns[2];
-        CDSlider2.maxValue = cooldowns[3];
-        CDSlider3.maxValue = cooldowns[4];
-        CDSlider4.maxValue = cooldowns[5];
-        CDSliderLM.maxValue = cooldowns[0];
-        CDSliderRM.maxValue = cooldowns[1];
 
-        CDSlider1.value = 0;
-        CDSlider2.value = 0;
-        CDSlider3.value = 0;
-        CDSlider4.value = 0;
-        CDSliderLM.value = 0;
-        CDSliderRM.value = 0;
+        CDLM_max = cooldownsMax[0];
+        CDRM_max = cooldownsMax[1];
+        CD1_max = cooldownsMax[2];
+        CD2_max = cooldownsMax[3];
+        CD3_max = cooldownsMax[4];
+        CD4_max = cooldownsMax[5];
+
+        CDLM.fillAmount = 0;
+        CDRM.fillAmount = 0;
+        CD1.fillAmount = 0;
+        CD2.fillAmount = 0;
+        CD3.fillAmount = 0;
+        CD4.fillAmount = 0;
+   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CDSlider1.value > 0)
+        currentCooldowns = PlayerManager.instance.player.GetComponent<Abilities>().abilityCooldowns;
+        float GlobalCD = PlayerManager.instance.player.GetComponent<AttackHandler>().globalCD;
+
+        
+        CDLM_current = currentCooldowns[0];
+
+        if (usesGlobalCD[0] && CDLM_current < GlobalCD)
         {
-            CDSlider1.value -= Time.deltaTime;
+            CDLM_current = GlobalCD;
         }
-        if (CDSlider2.value > 0)
+
+        CDRM_current = currentCooldowns[1];
+
+        if (usesGlobalCD[1] && CDRM_current < GlobalCD)
         {
-            CDSlider2.value -= Time.deltaTime;
+            CDRM_current = GlobalCD;
         }
-        if (CDSlider3.value > 0)
+
+        CD1_current = currentCooldowns[2];
+
+        if (usesGlobalCD[2] && CD1_current < GlobalCD)
         {
-            CDSlider3.value -= Time.deltaTime;
+            CD1_current = GlobalCD;
         }
-        if (CDSlider4.value > 0)
+
+        CD2_current = currentCooldowns[3];
+
+        if (usesGlobalCD[3] && CD2_current < GlobalCD)
         {
-            CDSlider4.value -= Time.deltaTime;
+            CD2_current = GlobalCD;
         }
-        if (CDSliderLM.value > 0)
+
+        CD3_current = currentCooldowns[4];
+
+        if (usesGlobalCD[4] && CD3_current < GlobalCD)
         {
-            CDSliderLM.value -= Time.deltaTime;
+            CD3_current = GlobalCD;
         }
-        if (CDSliderRM.value > 0)
+
+        CD4_current = currentCooldowns[5];
+
+        if (usesGlobalCD[5] && CD4_current < GlobalCD)
         {
-            CDSliderRM.value -= Time.deltaTime;
+            CD4_current = GlobalCD;
         }
+
+        CDLM.fillAmount = CDLM_current/CDLM_max;
+        CDRM.fillAmount = CDRM_current/CDRM_max;
+        CD1.fillAmount = CD1_current/CD1_max;
+        CD2.fillAmount = CD2_current/CD2_max;
+        CD3.fillAmount = CD3_current/CD3_max;
+        CD4.fillAmount = CD4_current/CD4_max;
     }
 }
