@@ -12,6 +12,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arachnid
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: maxHealth
@@ -42,6 +43,19 @@ PrefabInstance:
       propertyPath: patrolDistance.y
       value: 25
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: abilities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 4467885788258589445, guid: bdd8f4a7e539143f28b0006e343e8132,
+        type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4305524206464841785, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -97,7 +111,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4305524206464841785, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+=======
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -112,18 +135,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
-      propertyPath: abilities.Array.size
-      value: 1
+      propertyPath: maxHealth
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
-      propertyPath: abilities.Array.data[0]
-      value: 
-      objectReference: {fileID: 4467885788258589445, guid: bdd8f4a7e539143f28b0006e343e8132,
-        type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 121958934078642817, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+=======
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_BaseOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
         type: 3}
       propertyPath: m_Extents.x
       value: 0.2
@@ -151,29 +182,46 @@ PrefabInstance:
     - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Height
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       value: 3.2883277
       objectReference: {fileID: 0}
     - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Center.x
       value: 0.00000003973643
+=======
+      value: 3
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Center.y
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       value: 0.77882326
+=======
+      value: 1
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.00000011920929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Radius
       value: 0.3
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+=======
+    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
         type: 3}
       propertyPath: m_Speed
       value: 8
@@ -285,6 +333,21 @@ PrefabInstance:
     - target: {fileID: 4074521176610142, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.49524957
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074521176610142, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.065863e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074521176610142, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4971255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074521176610142, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6507504
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4444302563080348, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -302,6 +365,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.4939921
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4444302563080348, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7220748
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444302563080348, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.068999e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444302563080348, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0039148396
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4407770932193112, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.5049837
@@ -326,6 +404,17 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.49999994
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4749032374606564, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749032374606564, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999994
+      objectReference: {fileID: 0}
     - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.5059591
@@ -342,18 +431,71 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.49637234
       objectReference: {fileID: 0}
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7220748
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.0306664e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.003914621
+      objectReference: {fileID: 0}
     - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalRotation.x
       value: 0.5059591
       objectReference: {fileID: 0}
-    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.49399206
       objectReference: {fileID: 0}
-    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.5035789
       objectReference: {fileID: 0}
+    - target: {fileID: 4933409154973532, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49637234
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      propertyPath: m_LocalPosition.x
+      value: 0.7220746
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.029313e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.53112334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalRotation.x
+      value: 0.40336367
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalRotation.y
+      value: -0.5520862
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalRotation.z
+      value: -0.44181535
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4968092838670812, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.49637234
@@ -397,6 +539,67 @@ PrefabInstance:
     - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.4939921
+=======
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5807735
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.45963836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.046978988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808185976012966, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.4494495e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5035789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.49637237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.50595915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4939921
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7220748
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.0676455e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813163860742988, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.53112316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087134509428396, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.1466452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087134509428396, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.18576768
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087134509428396, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5376582
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087134509428396, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8092646
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4012598311390974, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -426,6 +629,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.0000001
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.00000007496214
@@ -475,6 +679,117 @@ PrefabInstance:
       value: 0.14090766
       objectReference: {fileID: 0}
     - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4012598311390974, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022475576542374, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.4659173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022475576542374, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.21988113
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022475576542374, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.35734218
+      objectReference: {fileID: 0}
+    - target: {fileID: 4022475576542374, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.779025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000007496214
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000011983424
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9907392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.13577837
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8742466
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.005487
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034424247369582, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044835588370494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4659288
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044835588370494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.21988477
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044835588370494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3573409
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044835588370494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7790177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056921846385746, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.046473853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056921846385746, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.15506822
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056921846385746, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.84468806
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056921846385746, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5101923
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.064452484
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.011100367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.98786014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.14090766
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalPosition.x
       value: -1.0360718
       objectReference: {fileID: 0}
@@ -497,6 +812,73 @@ PrefabInstance:
     - target: {fileID: 4000777523606678, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000002
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483134228764262, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.8843958
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483134228764262, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.395607
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483134228764262, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.24762523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483134228764262, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0045900815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382867003432990, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14664547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382867003432990, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.18576738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382867003432990, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5376576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382867003432990, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8092651
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304140958747556, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.046473995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304140958747556, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.1550682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304140958747556, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.84468776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304140958747556, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.51019275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316174377107840, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.8843958
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316174377107840, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.39560696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316174377107840, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.24762516
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316174377107840, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.004589979
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4325212163552168, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -526,6 +908,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000002
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4325212163552168, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.285035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325212163552168, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5631886
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.34989384
@@ -547,6 +940,7 @@ PrefabInstance:
       value: 1.7520695
       objectReference: {fileID: 0}
     - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       propertyPath: m_LocalPosition.y
       value: -7.141841
       objectReference: {fileID: 0}
@@ -555,16 +949,47 @@ PrefabInstance:
       value: -5.687131
       objectReference: {fileID: 0}
     - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+      propertyPath: m_LocalPosition.z
+      value: -5.687131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalScale.x
       value: 0.9999993
       objectReference: {fileID: 0}
     - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       propertyPath: m_LocalScale.y
       value: 1.0000004
       objectReference: {fileID: 0}
     - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000007
+=======
+      propertyPath: m_LocalScale.z
+      value: 1.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.141841
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059444447736, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256659974371114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.8000767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256659974371114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.29108402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256659974371114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46686912
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4264357728742574, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -638,6 +1063,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4720103280859794, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4663144358054716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.12178111
@@ -670,6 +1102,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.9999999
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4663144358054716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663144358054716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.875506
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4590304992394954, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.0000054971074
@@ -710,6 +1153,29 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9999999
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4590304992394954, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6399546
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591699793699504, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.29108405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591699793699504, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.23912457
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591699793699504, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.8000767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591699793699504, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.46686912
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4561693719810676, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.102254115
@@ -746,6 +1212,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9999998
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4561693719810676, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.5631886
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.11535998
@@ -761,6 +1234,17 @@ PrefabInstance:
     - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.592832
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.2154274
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.875506
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -769,6 +1253,13 @@ PrefabInstance:
     - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0000001
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4557810634707376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
@@ -805,6 +1296,7 @@ PrefabInstance:
     - target: {fileID: 4946297397270020, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000004
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -877,6 +1369,148 @@ PrefabInstance:
     - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946297397270020, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.678381
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946297397270020, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.295495
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.34374252
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71901435
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17002386
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5796131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7520704
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.1418414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.687131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896983552406010, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923229905600096, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000003156971
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923229905600096, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000109052536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.099601015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.08910725
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9046083
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4047509
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.4383755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.67838
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704890790244, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.295495
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.045526095
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6610304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03121398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.748326
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000054359436
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00014305115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.317244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202194217699972, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000036239624
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4162634004089188, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -930,6 +1564,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.99999994
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.000073047646
@@ -947,18 +1582,66 @@ PrefabInstance:
       value: 0.9999212
       objectReference: {fileID: 0}
     - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4114595955284442, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0075359107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114595955284442, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.01205452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114595955284442, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.21787836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114595955284442, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9758724
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114595955284442, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000073047646
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.007015011
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.010410322
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999212
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalPosition.x
       value: -2.5563564
       objectReference: {fileID: 0}
     - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.00000047683716
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9999999
       objectReference: {fileID: 0}
     - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalScale.y
       value: 0.99999976
       objectReference: {fileID: 0}
@@ -966,6 +1649,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000001
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4112047692361246, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4125739244442460, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.07304639
@@ -985,6 +1675,13 @@ PrefabInstance:
     - target: {fileID: 4125739244442460, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6553745
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125739244442460, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4125739244442460, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1001,12 +1698,45 @@ PrefabInstance:
     - target: {fileID: 4125739244442460, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000004
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0000001
       objectReference: {fileID: 0}
     - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0071408683
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.008206173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.44669905
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.89461815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000019073486
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503410362469742, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
@@ -1050,6 +1780,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9999987
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4414973214615570, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.4205046
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.000000024570161
@@ -1067,6 +1804,13 @@ PrefabInstance:
       value: 0.99062765
       objectReference: {fileID: 0}
     - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      propertyPath: m_LocalPosition.x
+      value: -3.6216507
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalPosition.y
       value: 0.00000047683716
       objectReference: {fileID: 0}
@@ -1077,6 +1821,7 @@ PrefabInstance:
     - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.99999994
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.y
@@ -1085,6 +1830,40 @@ PrefabInstance:
     - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9999999
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320846940892360, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330277388501054, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.17396772
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330277388501054, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.03854393
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330277388501054, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3545308
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330277388501054, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9179093
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330277388501054, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330277388501054, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000038146973
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1103,16 +1882,37 @@ PrefabInstance:
       value: 0.9999212
       objectReference: {fileID: 0}
     - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       propertyPath: m_LocalPosition.y
       value: -0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.99999976
+=======
+      propertyPath: m_LocalPosition.x
+      value: -2.5563564
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347867963179888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99999976
       objectReference: {fileID: 0}
     - target: {fileID: 4238424869858744, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1150,6 +1950,37 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.99999976
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.011949207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.054925214
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3948604
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91702
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000014305115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000034332275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289102642561732, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4550670595206416, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.07304654
@@ -1187,6 +2018,37 @@ PrefabInstance:
       value: 0.99999964
       objectReference: {fileID: 0}
     - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      propertyPath: m_LocalRotation.x
+      value: 0.0071408153
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.008206148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.4466989
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8946183
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000002861023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000034332275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953751903790420, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalScale.x
       value: 1.0000001
       objectReference: {fileID: 0}
@@ -1238,6 +2100,51 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9999979
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.04508881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.663626
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.030947644
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7460628
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.317246
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000538826
+=======
+    - target: {fileID: 4921743322675568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.17396782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921743322675568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.038544003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921743322675568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.35453048
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921743322675568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91790944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921743322675568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.04508881
@@ -1263,10 +2170,16 @@ PrefabInstance:
       value: 0.0000538826
       objectReference: {fileID: 0}
     - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0001411438
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       propertyPath: m_LocalScale.y
       value: 1.000005
       objectReference: {fileID: 0}
@@ -1363,6 +2276,111 @@ PrefabInstance:
       value: 0.51381135
       objectReference: {fileID: 0}
     - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+      propertyPath: m_LocalScale.y
+      value: 1.000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828049530912888, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999955
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.026497405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6379719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.035149425
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.76880056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.1510773
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000054836273
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0001335144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835687892455448, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.031855747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.021228578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7300177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6823553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.640118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.007472992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.21062136
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152776303353982, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.027326472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.85215044
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.09534554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.51381135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.266336
       objectReference: {fileID: 0}
@@ -1371,9 +2389,91 @@ PrefabInstance:
       value: -0.00000023841858
       objectReference: {fileID: 0}
     - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0000014
       objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0012091154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0009868289
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.36529726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9308896
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000036239624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028388143559114, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0819288
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8569093
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.023300465
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50838107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalPosition.x
+      value: -10.453453
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000010728836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalScale.x
+      value: 1.0000036
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4086811384934716, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.9999999
@@ -1417,6 +2517,15 @@ PrefabInstance:
     - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9999916
+=======
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999916
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436110390844950, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000049
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4487025001990816, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1465,6 +2574,18 @@ PrefabInstance:
     - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.7798112
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.10196753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.61762303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
       objectReference: {fileID: 0}
     - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1497,6 +2618,73 @@ PrefabInstance:
     - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384122790793898, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.018462827
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384122790793898, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.011032008
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384122790793898, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3911729
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384122790793898, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9200659
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384122790793898, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalPosition.x
+      value: -9.832268
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4384122790793898, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalPosition.z
+      value: -0.0000038146973
+      objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.99999917
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376383842819140, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999996
+=======
+    - target: {fileID: 4336113195994476, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0012092645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336113195994476, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0009871263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336113195994476, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3652976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336113195994476, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9308895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336113195994476, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00004196167
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4328258661138962, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1565,6 +2753,13 @@ PrefabInstance:
     - target: {fileID: 4276935290300494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.5113161
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276935290300494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.453449
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4276935290300494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1583,6 +2778,7 @@ PrefabInstance:
       value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 4276935290300494, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       propertyPath: m_LocalScale.z
       value: 0.9999961
       objectReference: {fileID: 0}
@@ -1727,8 +2923,274 @@ PrefabInstance:
       value: -2.8959312
       objectReference: {fileID: 0}
     - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+      propertyPath: m_LocalScale.z
+      value: 0.9999961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.025055075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8467626
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.10212886
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.52147394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.266336
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000035762787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.99999845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755534507551132, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.025069581
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.02552055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5318727
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8460684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.640121
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0074768066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.21062088
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.99999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781569330819454, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00007304372
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.007015093
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.010410333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999212
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.895934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779182687173228, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.024299888
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.059097894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.38185307
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9220115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000034332275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583879941235382, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509963411703366, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.019091252
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509963411703366, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.004506904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509963411703366, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39985457
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509963411703366, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9163687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509963411703366, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.024295826
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.059093874
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.38185406
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92201144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978919774836856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00007303138
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0070149563
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0104103405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999212
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8959312
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.018462388
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.011030809
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3911714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92006654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821226586099376, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      propertyPath: m_LocalPosition.y
+      value: 0.0000009536743
       objectReference: {fileID: 0}
     - target: {fileID: 4881602064818568, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
@@ -1766,6 +3228,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+    - target: {fileID: 4490513674653456, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490513674653456, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.0002740321
@@ -1789,6 +3262,7 @@ PrefabInstance:
     - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1797,6 +3271,8 @@ PrefabInstance:
     - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0000001
+=======
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.y
@@ -1805,6 +3281,17 @@ PrefabInstance:
     - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000001
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349195131535884, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 4975248017314856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1846,7 +3333,55 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.99999994
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+=======
+    - target: {fileID: 4975248017314856, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.14252
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.06063266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.07020118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.015460894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99556845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9884033
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185415163451330, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4120512188180224, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
       propertyPath: m_LocalRotation.x
       value: -0.06063266
       objectReference: {fileID: 0}
@@ -1882,6 +3417,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000001
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Unity/Assets/Prefabs/Enemy/SpiderThingy.prefab
     - target: {fileID: 4120512188180224, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.0000000044700195
@@ -1914,6 +3450,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> develop:Unity/Assets/Prefabs/Enemy/Arachnid.prefab
     - target: {fileID: 4454700719254592, guid: 93e67935d04204a46bd6f78173df0a09, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.060442075
