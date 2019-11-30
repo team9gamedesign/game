@@ -9,9 +9,17 @@ public class AbilityInstantiator : MonoBehaviour
     public GameObject bullRushDust;
     public GameObject kickHitbox;
 
+    private Stats stats;
+
+    void Start()
+    {
+        stats = GetComponent<Stats>();
+    }
+
     public void InstantiateEarthShatter()
     {
-        Instantiate(earthShatter, transform.position, transform.rotation);
+        GameObject earthShatterObject = Instantiate(earthShatter, transform.position, transform.rotation);
+        earthShatterObject.GetComponent<EarthShatterDamage>().damage *= stats.damageFactor;
         Follow cameraFollow = Camera.main.GetComponent<Follow>();
         cameraFollow.shake = true;
         Animator animator = GetComponent<Animator>();
@@ -21,7 +29,8 @@ public class AbilityInstantiator : MonoBehaviour
 
     public void InstantiatePommelHitbox()
     {
-        Instantiate(pommelHitbox, transform.position + transform.forward, transform.rotation);
+        GameObject pommelHitboxObject = Instantiate(pommelHitbox, transform.position + transform.forward, transform.rotation);
+        pommelHitboxObject.GetComponent<PlayerAbilityHitbox>().damage *= stats.damageFactor;
         Animator animator = GetComponent<Animator>();
         animator.SetInteger("Pommel", animator.GetInteger("Pommel") - 1);
     }
@@ -39,7 +48,8 @@ public class AbilityInstantiator : MonoBehaviour
     public void InstantiateKickHitbox()
     {
         float zDistance = kickHitbox.GetComponent<BoxCollider>().size.z;
-        Instantiate(kickHitbox, transform.position + zDistance/2 * transform.forward, transform.rotation);
+        GameObject kickHitboxObject = Instantiate(kickHitbox, transform.position + zDistance/2 * transform.forward, transform.rotation);
+        kickHitboxObject.GetComponent<PlayerAbilityHitbox>().damage *= stats.damageFactor;
         Animator animator = GetComponent<Animator>();
         animator.SetInteger("Kick", animator.GetInteger("Kick") - 1);
     }

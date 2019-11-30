@@ -117,6 +117,17 @@ public class Stats : MonoBehaviour
         xpToNextLevel = GetXPToNextLevel(level);
     }
 
+    public void IncreaseLevel()
+    {
+        if(xp >= xpToNextLevel)
+        {
+            level += 1;
+            xp -= xpToNextLevel;
+            SetStatsFromLevel(level);
+            health = maxHealth;
+        }
+    }
+
     public int GetXPToNextLevel(int level)
     {
         float exponent = 1.5f;
