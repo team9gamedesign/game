@@ -50,6 +50,8 @@ MonoBehaviour:
   requiresBerserkerMode: 0
   angerNeeded: 0
   heatNeeded: 50
+  requiresLevel: 1
+  levelRequirement: 4
 --- !u!114 &8612228630713670790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,3 +64,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2b98c14dc54447c99a83cc57a03b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healAmount: 30
