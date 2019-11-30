@@ -638,12 +638,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31333986197cd247bbb2e8fe7c039a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
   health: 5
+  maxHealth: 2
   speed: 0
   globalCDValue: 0
   maxGravity: 0
   gravity: 0
+  damageFactor: 0
   maxAnger: 0
   anger: 0
   berserkerMode: 0
@@ -661,6 +662,14 @@ MonoBehaviour:
   bullRushDamage: 0
   blocking: 0
   blockAmount: 0
+  doubleUpFactor: 1
+  maxHeat: 0
+  heat: 0
+  barrier: 0
+  laser: 0
+  level: 1
+  xp: 0
+  xpToNextLevel: 0
 --- !u!114 &1333398388869753600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45215d8b0007746c5acc68ead0f1b556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xp: 100
 --- !u!95 &1333398388869753602
 Animator:
   serializedVersion: 3
@@ -725,7 +735,6 @@ MonoBehaviour:
   shouldPatrol: 1
   patrolDistance: {x: 5, y: 5}
   timeBetweenPatrols: 5
-  shouldMove: 1
 --- !u!114 &1333398388869753604
 MonoBehaviour:
   m_ObjectHideFlags: 0

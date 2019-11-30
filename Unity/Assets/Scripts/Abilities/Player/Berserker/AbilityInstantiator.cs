@@ -37,7 +37,6 @@ public class AbilityInstantiator : MonoBehaviour
 
     public void StartBullRush()
     {
-        Stats stats = GetComponent<Stats>();
         stats.bullRush = true;
         stats.bullRushTimer = 0.3f;
         Animator animator = GetComponent<Animator>();

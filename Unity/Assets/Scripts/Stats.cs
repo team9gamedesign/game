@@ -73,6 +73,17 @@ public class Stats : MonoBehaviour
         damageTaken = new List<float>();
     }
 
+    void Update()
+    {
+        if(gameObject.CompareTag("Player"))
+        {
+            if(xp >= xpToNextLevel)
+            {
+                IncreaseLevel();
+            }
+        }
+    }
+
     public void ChangeHealth(float value) {
         if(value < 0)
         {
@@ -119,13 +130,10 @@ public class Stats : MonoBehaviour
 
     public void IncreaseLevel()
     {
-        if(xp >= xpToNextLevel)
-        {
-            level += 1;
-            xp -= xpToNextLevel;
-            SetStatsFromLevel(level);
-            health = maxHealth;
-        }
+        level += 1;
+        xp -= xpToNextLevel;
+        SetStatsFromLevel(level);
+        health = maxHealth;
     }
 
     public int GetXPToNextLevel(int level)

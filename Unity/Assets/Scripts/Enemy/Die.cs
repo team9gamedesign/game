@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Die : MonoBehaviour
 {
+    public int xp;
+
     Stats stats;
 
     // Start is called before the first frame update
@@ -17,6 +19,7 @@ public class Die : MonoBehaviour
     {
         if(stats.health <= 0)
         {
+            PlayerManager.instance.player.GetComponent<Stats>().xp += xp;
             Destroy(gameObject);
         }
     }
