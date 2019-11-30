@@ -49,12 +49,4 @@ public class BombShot : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject == player)
-        {
-            player.GetComponent<Stats>().ChangeHealth(-damage);
-            Destroy(gameObject);
-        }
-    }
 }
