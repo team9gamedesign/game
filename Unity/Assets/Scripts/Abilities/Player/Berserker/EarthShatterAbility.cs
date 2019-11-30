@@ -8,7 +8,9 @@ public class EarthShatterAbility : MonoBehaviour
     void Start()
     {
         Animator animator = GetComponent<Ability>().user.GetComponent<Animator>();
-        animator.SetTrigger("EarthShatter");
+        Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
+        animator.SetInteger("EarthShatter", stats.doubleUpFactor);
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }

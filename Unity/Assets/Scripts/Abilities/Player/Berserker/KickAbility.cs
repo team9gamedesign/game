@@ -8,7 +8,9 @@ public class KickAbility : MonoBehaviour
     void Start()
     {
         Animator animator = GetComponent<Ability>().user.GetComponent<Animator>();
-        animator.SetTrigger("Kick");
+        Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
+        animator.SetInteger("Kick", stats.doubleUpFactor);
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }

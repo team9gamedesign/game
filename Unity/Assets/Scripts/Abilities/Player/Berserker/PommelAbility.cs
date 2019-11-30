@@ -6,7 +6,9 @@ public class PommelAbility : MonoBehaviour
 {
     void Start() {
         Animator animator = GetComponent<Ability>().user.GetComponent<Animator>();
-        animator.SetTrigger("Pommel");
+        Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
+        animator.SetInteger("Pommel", stats.doubleUpFactor);
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }

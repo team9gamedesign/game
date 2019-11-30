@@ -12,7 +12,8 @@ public class BlockAbility : MonoBehaviour
         animator.SetTrigger("PunchingBag");
         Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
         stats.blocking = true;
-        stats.blockAmount = blockAmount;
+        stats.blockAmount = blockAmount * stats.doubleUpFactor;
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }

@@ -42,6 +42,10 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public int blockAmount;
 
+    //Combinations
+    [HideInInspector]
+    public int doubleUpFactor = 1;
+    
     //Gun Mage stats
     public int maxHeat;
     [HideInInspector]

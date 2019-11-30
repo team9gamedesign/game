@@ -9,7 +9,9 @@ public class FireBallAbility : MonoBehaviour
     {
         GameObject user = GetComponent<Ability>().user;
         Animator animator = user.GetComponent<Animator>();
-        animator.SetTrigger("FireBall");
+        Stats stats = user.GetComponent<Stats>();
+        animator.SetInteger("FireBall", stats.doubleUpFactor);
+        stats.doubleUpFactor = 1;
         Destroy(gameObject);
     }
 }
