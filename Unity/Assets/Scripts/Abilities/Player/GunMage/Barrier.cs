@@ -25,7 +25,7 @@ public class Barrier : MonoBehaviour
         GameObject player = PlayerManager.instance.player;
         Vector3 playerXZ = new Vector3(player.transform.position.x, 0, player.transform.position.z);
         Vector3 thisXZ = new Vector3(transform.position.x, 0, transform.position.z);
-        if(Vector3.Distance(playerXZ, thisXZ) <= GetComponent<SphereCollider>().radius)
+        if(Vector3.Distance(playerXZ, thisXZ) <= GetComponent<SphereCollider>().radius * transform.localScale.x)
         {
             player.GetComponent<Stats>().barrier = false;
         }

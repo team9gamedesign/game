@@ -13,7 +13,8 @@ public class PunchingBagAbility : MonoBehaviour
         animator.SetTrigger("PunchingBag");
         Stats stats = GetComponent<Ability>().user.GetComponent<Stats>();
         stats.punchingBag = true;
-        stats.punchingBagTimer = punchingBagTimer;
+        stats.punchingBagTimer = punchingBagTimer * stats.doubleUpFactor;
+        stats.doubleUpFactor = 1;
         stats.punchingBagAngerAmount = punchingBagAngerAmount;
         Destroy(gameObject);
     }
