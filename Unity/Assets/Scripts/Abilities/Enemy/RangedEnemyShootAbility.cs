@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RangedEnemyShootAbility : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class RangedEnemyShootAbility : MonoBehaviour
     {
         Animator enemyAnimator = GetComponent<Ability>().user.GetComponent<Animator>();
         enemyAnimator.SetBool("Shoot", true);
+        enemyAnimator.SetBool("ShouldMove", false);
         Destroy(gameObject);
     }
 }
