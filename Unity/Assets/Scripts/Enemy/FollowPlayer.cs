@@ -4,22 +4,25 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class FollowPlayer : MonoBehaviour
-{
-    private Animator anim;
-    private NavMeshAgent agent;
-    private Transform player;
-    private float playerRadius;
+{    
     public float aggroRange = 10f;    
+    public float stopDistance = 5;
     public bool shouldPatrol = true;
     public Vector2 patrolDistance = new Vector2(5,5);
     public float timeBetweenPatrols = 5f;
+
+    private Animator anim;
+    private NavMeshAgent agent;
+    private NavMeshObstacle obstacle;
+    private Transform player;
+    private float playerRadius;
     private float timeBetweenPatrolsTimer = 0;
-    private bool hasAggroed = false;
 
     void Start()
     {
         player = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
+        obstacle = GetComponent<NavMeshObstacle>();
         anim =  GetComponent<Animator>();
         playerRadius = player.GetComponent<CharacterController>().radius;
     }
@@ -30,29 +33,46 @@ public class FollowPlayer : MonoBehaviour
     }
 
     void Movement()
-    {
-        if(anim)
+    {  
+        float distance = Vector3.Distance(player.position, transform.position);
+        if(distance <= stopDistance)
         {
-            anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
-        }
-        
-        if(hasAggroed)
-        {
-            agent.SetDestination(player.position - (player.position - transform.position).normalized * (playerRadius + agent.radius));
+            if(agent.gameObject.activeSelf)
+            {
+                agent.enabled = false;
+                obstacle.enabled = true;
+            }
             Rotation();
         }
-        else
+        else if(distance <= aggroRange)
         {
-            float distance = Vector3.Distance(player.position, transform.position);
-            if(distance <= aggroRange)
+            if(obstacle.gameObject.activeSelf)
             {
-                hasAggroed = true;
-                agent.SetDestination(player.position - (player.position - transform.position).normalized * (playerRadius + agent.radius));
+                obstacle.enabled = false;
+                agent.enabled = true;
             }
-            else if(shouldPatrol)
+            if(!agent.hasPath || agent.isPathStale || (agent.hasPath && Vector3.Distance(agent.path.corners[agent.path.corners.Length - 1], player.position) > 1))
             {
-                PatrolRandomly();
+                NavMeshPath path = new NavMeshPath();
+                agent.CalculatePath(player.position, path);
+                if(path.status == NavMeshPathStatus.PathComplete)
+                {
+                    agent.SetDestination(player.position);
+                }
+                else if(path.status == NavMeshPathStatus.PathPartial)
+                {
+                    agent.SetDestination(path.corners[Mathf.FloorToInt(path.corners.Length * 0.8f)]);
+                } 
             }
+        }
+        else if(shouldPatrol)
+        {
+            PatrolRandomly();
+        }
+
+        if(anim)    //Push the speed to the animator
+        {
+            anim.SetFloat("Speed", agent.desiredVelocity.magnitude);
         }
     }
 
