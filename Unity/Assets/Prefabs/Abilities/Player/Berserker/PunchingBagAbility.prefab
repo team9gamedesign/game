@@ -49,6 +49,9 @@ MonoBehaviour:
   user: {fileID: 0}
   requiresBerserkerMode: 0
   angerNeeded: 0
+  heatNeeded: 0
+  requiresLevel: 0
+  levelRequirement: 0
 --- !u!114 &566387087601535907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +64,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c077f797149d4e04ab9848889656369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 1789065774346146238, guid: b5a632c3be30a4be4a4401ee3378f753, type: 3}
+  punchingBagTimer: 10
+  punchingBagAngerAmount: 5
