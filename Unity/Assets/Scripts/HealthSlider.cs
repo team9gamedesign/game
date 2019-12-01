@@ -23,7 +23,7 @@ public class HealthSlider : MonoBehaviour
         {
             currentLevel = stats.level;
             healthBar.maxValue = stats.GetHealthFromLevel(currentLevel);
-            healthBar.value = GetComponent<Stats>().health;
         }
+        healthBar.value = GetComponent<Stats>().health;
     }
 }
