@@ -6,18 +6,24 @@ using UnityEngine.UI;
 public class HealthSlider : MonoBehaviour
 {
     public Slider healthBar;
+    private int currentLevel;
+    private Stats stats;
 
     // Start is called before the first frame update
     void Start()
     {
+        stats = GetComponent<Stats>();
         healthBar = GameObject.Find("healthBarPlayer").GetComponent<Slider>(); //TODO: Fix
-        healthBar.maxValue = GetComponent<Stats>().maxHealth;
-        healthBar.value = GetComponent<Stats>().health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.value = GetComponent<Stats>().health;
+        if(stats.level != currentLevel)
+        {
+            currentLevel = stats.level;
+            healthBar.maxValue = stats.GetHealthFromLevel(currentLevel);
+            healthBar.value = GetComponent<Stats>().health;
+        }
     }
 }

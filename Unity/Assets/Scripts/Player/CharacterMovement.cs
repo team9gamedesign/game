@@ -88,7 +88,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if(other.CompareTag("Enemy"))
             {
-                other.GetComponent<Stats>().ChangeHealth(-stats.bullRushDamage);
+                other.GetComponent<Stats>().ChangeHealth(-stats.bullRushDamage * stats.damageFactor);
             }
         }
     }

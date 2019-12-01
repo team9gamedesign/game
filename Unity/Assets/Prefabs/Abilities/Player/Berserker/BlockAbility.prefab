@@ -49,6 +49,9 @@ MonoBehaviour:
   user: {fileID: 0}
   requiresBerserkerMode: 0
   angerNeeded: 10
+  heatNeeded: 0
+  requiresLevel: 1
+  levelRequirement: 3
 --- !u!114 &-6096751931570760629
 MonoBehaviour:
   m_ObjectHideFlags: 0

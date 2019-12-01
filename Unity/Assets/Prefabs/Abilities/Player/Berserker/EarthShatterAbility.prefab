@@ -46,8 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usesGlobalCD: 1
   cooldown: 10
-  requiresBerserkerMode: 1
   user: {fileID: 0}
+  requiresBerserkerMode: 1
+  angerNeeded: 0
+  heatNeeded: 0
+  requiresLevel: 1
+  levelRequirement: 2
 --- !u!114 &6848707795708983691
 MonoBehaviour:
   m_ObjectHideFlags: 0

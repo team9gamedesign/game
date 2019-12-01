@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    public float maxHealth;
     public float health;
+    public float maxHealth;
     public float speed;
     public float globalCDValue;
 
     public float maxGravity;
     [HideInInspector]
     public float gravity;
+
+    public float damageFactor;
 
     //Berserker stats
     public int maxAnger;
@@ -55,10 +57,31 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public bool laser;
 
+    public int level = 1;
+    [HideInInspector]
+    public int xp;
+    [HideInInspector]
+    public int xpToNextLevel;
+
     private void Start()
     {
+        if(gameObject.CompareTag("Player"))
+        {
+            SetStatsFromLevel(level);
+        } 
         health = maxHealth;
         damageTaken = new List<float>();
+    }
+
+    void Update()
+    {
+        if(gameObject.CompareTag("Player"))
+        {
+            if(xp >= xpToNextLevel)
+            {
+                IncreaseLevel();
+            }
+        }
     }
 
     public void ChangeHealth(float value) {
@@ -96,5 +119,37 @@ public class Stats : MonoBehaviour
     public void ChangeHeat(int value)
     {
         heat = Mathf.Clamp(heat + value, 0, maxHeat);
+    }
+
+    public void SetStatsFromLevel(int level)
+    {
+        maxHealth = GetHealthFromLevel(level);
+        damageFactor = GetDamageFactorFromLevel(level);
+        xpToNextLevel = GetXPToNextLevel(level);
+    }
+
+    public void IncreaseLevel()
+    {
+        level += 1;
+        xp -= xpToNextLevel;
+        SetStatsFromLevel(level);
+        health = maxHealth;
+    }
+
+    public int GetXPToNextLevel(int level)
+    {
+        float exponent = 1.5f;
+        float baseXP = 1000;
+        return (int)Mathf.Floor(baseXP * Mathf.Pow(level, exponent));
+    }
+
+    public int GetHealthFromLevel(int level)
+    {
+        return level * 100;
+    }
+
+    public float GetDamageFactorFromLevel(int level)
+    {
+        return level;
     }
 }

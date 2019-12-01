@@ -1863,11 +1863,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rhino
       objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: maxHealth
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4305524206464841785, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1938,6 +1933,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730267700662824768, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: xp
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 121958934078642817, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Extents.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 121958934078642817, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Extents.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: abilities.Array.size
@@ -1955,26 +1970,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4467885788258589445, guid: fb417811aff09a74d95a5d0150e70ba3,
         type: 3}
-    - target: {fileID: 121958934078642817, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Extents.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 121958934078642817, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Extents.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: a2cd2cbace323984280bd454427467b3, type: 3}
-    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 91dc02ec329eab24e8ffc1dc17ba9d2c, type: 2}
     - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2005,11 +2000,16 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.09422374
       objectReference: {fileID: 0}
-    - target: {fileID: 5261850689901711011, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
-      propertyPath: couldCharge
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: a2cd2cbace323984280bd454427467b3, type: 3}
+    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 91dc02ec329eab24e8ffc1dc17ba9d2c, type: 2}
     - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_Radius
@@ -2024,6 +2024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AngularSpeed
       value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261850689901711011, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: couldCharge
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4, type: 3}
