@@ -12,9 +12,18 @@ public class GunMageAbilityInstantiator : MonoBehaviour
     public GameObject icePatch;
     public GameObject fireBall;
 
+    private Stats stats;
+
+    void Start()
+    {
+        stats = GetComponent<Stats>();
+    }
+
     public void InstantiateBarrier()
     {
-        Instantiate(barrier, transform.position, Quaternion.identity);
+        GameObject barrierObject = Instantiate(barrier, transform.position, Quaternion.identity);
+        barrierObject.GetComponent<Barrier>().aliveTime *= stats.doubleUpFactor;
+        stats.doubleUpFactor = 1;
     }
 
     public void InstantiateIcePatch()
@@ -24,7 +33,10 @@ public class GunMageAbilityInstantiator : MonoBehaviour
             0,
             transform.position.z
         );
-        Instantiate(icePatch, transformGround, Quaternion.identity);
+        GameObject icePatchObject = Instantiate(icePatch, transformGround, Quaternion.identity);
+        icePatchObject.GetComponent<IcePatch>().damageFactor = stats.damageFactor;
+        icePatchObject.GetComponent<IcePatch>().maxSize *= stats.doubleUpFactor;
+        stats.doubleUpFactor = 1;
     }
 
     public void InstantiateShot()
@@ -41,7 +53,7 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Enemy"))
             {
-                hit.collider.gameObject.GetComponent<Stats>().ChangeHealth(-shootDamage);
+                hit.collider.gameObject.GetComponent<Stats>().ChangeHealth(-shootDamage * stats.damageFactor);
                 GetComponent<Stats>().ChangeHeat(shootHeat);
             }
             shotLine.SetPosition(1, hit.point);
@@ -49,11 +61,23 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         {
             shotLine.SetPosition(1, rayOrigin + transform.forward * shootRange);
         }
+
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void InstantiateLastShot()
+    {
+        Animator animator = GetComponent<Animator>();
+        animator.SetInteger("Shoot", animator.GetInteger("Shoot") - 1);
+        InstantiateShot();
     }
 
     public void InstantiateFireBall()
     {
-        Instantiate(fireBall, gunEnd.transform.position, transform.rotation);
+        GameObject fireBallObject = Instantiate(fireBall, gunEnd.transform.position, transform.rotation);
+        fireBallObject.GetComponent<FireBall>().damage *= stats.damageFactor;
+        Animator animator = GetComponent<Animator>();
+        animator.SetInteger("FireBall", animator.GetInteger("FireBall") - 1);
     }
 
     private IEnumerator RenderShot()

@@ -9,11 +9,8 @@ public class RangedEnemyShoot : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameObject enemy = animator.gameObject;
-        animator.SetBool("Shoot", false);
-        RangedEnemyShot createdShot = Instantiate(shot, enemy.transform.position, enemy.transform.rotation).GetComponent<RangedEnemyShot>();
-        GameObject player = GameObject.FindWithTag("Player");
-        createdShot.player = player;
+
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -23,10 +20,14 @@ public class RangedEnemyShoot : StateMachineBehaviour
     //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        GameObject enemy = animator.gameObject;
+        animator.SetBool("Shoot", false);
+        animator.SetBool("ShouldMove", true);
+        Vector3 spawnPosition = enemy.transform.Find("SpawnPoint").transform.position;
+        Instantiate(shot, spawnPosition, enemy.transform.rotation);
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

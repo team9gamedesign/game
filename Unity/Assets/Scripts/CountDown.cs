@@ -30,18 +30,28 @@ public class CountDown : MonoBehaviour
     public List<float> currentCooldowns;
     public List<bool> usesGlobalCD;
 
+    private Stats stats;
+    public List<bool> requiresLevel;
+    public List<int> levelRequirements;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        stats = PlayerManager.instance.player.GetComponent<Stats>();
         List<GameObject> abilities = PlayerManager.instance.player.GetComponent<Abilities>().abilities;
         List<float> cooldownsMax = new List<float>();
         usesGlobalCD = new List<bool>();
+        requiresLevel = new List<bool>();
+        levelRequirements = new List<int>();
 
         for(int i = 0; i < abilities.Count; ++i)
         {
             //Retrieve for all abilities the max cooldown value, put them in list cooldownsMax
             Ability abilityComponent = abilities[i].GetComponent<Ability>();
+
+            requiresLevel.Add(abilityComponent.requiresLevel);
+            levelRequirements.Add(abilityComponent.levelRequirement);
+
             if(abilityComponent.usesGlobalCD)
             {
                 cooldownsMax.Add(PlayerManager.instance.player.GetComponent<Stats>().globalCDValue);
@@ -80,6 +90,7 @@ public class CountDown : MonoBehaviour
         float GlobalCD = PlayerManager.instance.player.GetComponent<AttackHandler>().globalCD;
     
         //Update, for each cooldowntimer, the current cooldown value based on local and global cooldowns
+        //Left mouse button
         CDLM_current = currentCooldowns[0];
 
         if (usesGlobalCD[0] && CDLM_current < GlobalCD)
@@ -87,6 +98,12 @@ public class CountDown : MonoBehaviour
             CDLM_current = GlobalCD;
         }
 
+        if(requiresLevel[0] && stats.level < levelRequirements[0])
+        {
+            CDLM_current = CDLM_max;
+        }
+
+        //Right mouse button
         CDRM_current = currentCooldowns[1];
 
         if (usesGlobalCD[1] && CDRM_current < GlobalCD)
@@ -94,6 +111,12 @@ public class CountDown : MonoBehaviour
             CDRM_current = GlobalCD;
         }
 
+        if (requiresLevel[1] && stats.level < levelRequirements[1])
+        {
+            CDRM_current = CDRM_max;
+        }
+
+        //1 button
         CD1_current = currentCooldowns[2];
 
         if (usesGlobalCD[2] && CD1_current < GlobalCD)
@@ -101,6 +124,12 @@ public class CountDown : MonoBehaviour
             CD1_current = GlobalCD;
         }
 
+        if (requiresLevel[2] && stats.level < levelRequirements[2])
+        {
+            CD1_current = CD1_max;
+        }
+
+        //2 button
         CD2_current = currentCooldowns[3];
 
         if (usesGlobalCD[3] && CD2_current < GlobalCD)
@@ -108,6 +137,12 @@ public class CountDown : MonoBehaviour
             CD2_current = GlobalCD;
         }
 
+        if (requiresLevel[3] && stats.level < levelRequirements[3])
+        {
+            CD2_current = CD2_max;
+        }
+
+        //3 button
         CD3_current = currentCooldowns[4];
 
         if (usesGlobalCD[4] && CD3_current < GlobalCD)
@@ -115,11 +150,22 @@ public class CountDown : MonoBehaviour
             CD3_current = GlobalCD;
         }
 
+        if (requiresLevel[4] && stats.level < levelRequirements[4])
+        {
+            CD3_current = CD3_max;
+        }
+
+        //4 button
         CD4_current = currentCooldowns[5];
 
         if (usesGlobalCD[5] && CD4_current < GlobalCD)
         {
             CD4_current = GlobalCD;
+        }
+
+        if (requiresLevel[5] && stats.level < levelRequirements[5])
+        {
+            CD4_current = CD4_max;
         }
 
         //Fill the cooldown timers accordingly

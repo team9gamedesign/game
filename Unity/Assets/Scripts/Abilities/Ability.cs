@@ -13,4 +13,7 @@ public class Ability : MonoBehaviour
     public int angerNeeded;
 
     public int heatNeeded;
+
+    public bool requiresLevel;
+    public int levelRequirement;
 }

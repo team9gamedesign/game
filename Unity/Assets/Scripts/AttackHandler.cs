@@ -27,6 +27,11 @@ public class AttackHandler : MonoBehaviour
         GameObject abilityPrefab = abilities.abilities[abilityIndex];
         Ability abilityComponent = abilityPrefab.GetComponent<Ability>();
 
+        if (abilityComponent.requiresLevel && stats.level < abilityComponent.levelRequirement)
+        {
+            return;
+        }
+
         bool canUseAbility = false;
 
         if (abilityComponent.usesGlobalCD && Mathf.Approximately(globalCD, 0))

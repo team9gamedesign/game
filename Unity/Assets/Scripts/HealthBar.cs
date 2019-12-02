@@ -11,21 +11,27 @@ public class HealthBar : MonoBehaviour
     float maxHealth;
     float currentHealth;
 
+    private Stats stats;
+    private int currentLevel;
+
     // Start is called before the first frame update
     void Start()
     {
-        //Retrieve maxHealth and currentHealth to appropriately set healthBar filling
-        maxHealth = GetComponent<Stats>().maxHealth;
-        currentHealth = GetComponent<Stats>().health;
-
-        healthBar.fillAmount = currentHealth / maxHealth;
+        stats = GetComponent<Stats>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(currentLevel != stats.level)
+        {
+            //Retrieve maxHealth and currentHealth to appropriately set healthBar filling
+            maxHealth = stats.maxHealth;
+            currentHealth = stats.health;
+        }
+
         //Update healthBar filling
-        currentHealth = GetComponent<Stats>().health;
+        currentHealth = stats.health;
         healthBar.fillAmount = currentHealth / maxHealth;
     }
 }

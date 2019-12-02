@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RangedEnemyShot : MonoBehaviour
 {
-    [HideInInspector]
-    public GameObject player;
-    public float speed = 10f;
+    private GameObject player;
+    public float speed = 20f;
+    public float damage = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        Destroy(gameObject, 10f);
+        player = PlayerManager.instance.player;
+        Destroy(gameObject, 1f);
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class RangedEnemyShot : MonoBehaviour
     {
         if(other.gameObject == player)
         {
-            player.GetComponent<Stats>().ChangeHealth(-1);
+            player.GetComponent<Stats>().ChangeHealth(-damage);
             Destroy(gameObject);
         }
     }

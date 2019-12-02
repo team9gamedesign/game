@@ -7,13 +7,15 @@ public class IcePatch : MonoBehaviour
     public float aliveTime;
     private float aliveTimer;
 
-    private Vector3 maxSize;
+    [HideInInspector]
+    public float damageFactor;
+
+    public Vector3 maxSize;
 
     // Start is called before the first frame update
     void Start()
     {
         aliveTimer = aliveTime;
-        maxSize = transform.localScale;
         transform.localScale = new Vector3(0.1f, transform.localScale.y, 0.1f);
     }
 
@@ -59,7 +61,7 @@ public class IcePatch : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Stats>().ChangeHealth(-Time.deltaTime);
+            other.GetComponent<Stats>().ChangeHealth(-Time.deltaTime * damageFactor);
         }
     }
 }
