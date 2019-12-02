@@ -5,73 +5,175 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
-    public Slider CDSlider1;
-    public Slider CDSlider2;
-    public Slider CDSlider3;
-    public Slider CDSlider4;
-    public Slider CDSliderLM;
-    public Slider CDSliderRM;
+    //Insert the CoolDown timers
+    public Image CDLM; 
+    public Image CDRM;
+    public Image CD1;
+    public Image CD2;
+    public Image CD3;
+    public Image CD4;
+        
+    float CDLM_max;
+    float CDRM_max;
+    float CD1_max;
+    float CD2_max;
+    float CD3_max;
+    float CD4_max;
 
-    public List<Slider> CDSliders;
+    float CDLM_current;
+    float CDRM_current;
+    float CD1_current;
+    float CD2_current;
+    float CD3_current;
+    float CD4_current;
+
+    public List<float> currentCooldowns;
+    public List<bool> usesGlobalCD;
+
+    private Stats stats;
+    public List<bool> requiresLevel;
+    public List<int> levelRequirements;
 
     // Start is called before the first frame update
     void Start()
     {
-        List<GameObject> abilities = GameObject.FindWithTag("Player").GetComponent<Abilities>().abilities;
-        List<float> cooldowns = new List<float>();
+        stats = PlayerManager.instance.player.GetComponent<Stats>();
+        List<GameObject> abilities = PlayerManager.instance.player.GetComponent<Abilities>().abilities;
+        List<float> cooldownsMax = new List<float>();
+        usesGlobalCD = new List<bool>();
+        requiresLevel = new List<bool>();
+        levelRequirements = new List<int>();
+
         for(int i = 0; i < abilities.Count; ++i)
         {
+            //Retrieve for all abilities the max cooldown value, put them in list cooldownsMax
             Ability abilityComponent = abilities[i].GetComponent<Ability>();
+
+            requiresLevel.Add(abilityComponent.requiresLevel);
+            levelRequirements.Add(abilityComponent.levelRequirement);
+
             if(abilityComponent.usesGlobalCD)
             {
-                cooldowns.Add(GameObject.FindWithTag("Player").GetComponent<Stats>().globalCDValue);
-                cooldowns[i] = Mathf.Max(cooldowns[i], abilityComponent.cooldown);
+                cooldownsMax.Add(PlayerManager.instance.player.GetComponent<Stats>().globalCDValue);
+                cooldownsMax[i] = Mathf.Max(cooldownsMax[i], abilityComponent.cooldown);
+                usesGlobalCD.Add(true);
             } else
             {
-                cooldowns.Add(abilityComponent.cooldown);
+                cooldownsMax.Add(abilityComponent.cooldown);
+                usesGlobalCD.Add(false);
             }
         }
-        CDSlider1.maxValue = cooldowns[2];
-        CDSlider2.maxValue = cooldowns[3];
-        CDSlider3.maxValue = cooldowns[4];
-        CDSlider4.maxValue = cooldowns[5];
-        CDSliderLM.maxValue = cooldowns[0];
-        CDSliderRM.maxValue = cooldowns[1];
 
-        CDSlider1.value = 0;
-        CDSlider2.value = 0;
-        CDSlider3.value = 0;
-        CDSlider4.value = 0;
-        CDSliderLM.value = 0;
-        CDSliderRM.value = 0;
+        //Set cooldown timer max values according to list cooldownsMax 
+        CDLM_max = cooldownsMax[0];
+        CDRM_max = cooldownsMax[1];
+        CD1_max = cooldownsMax[2];
+        CD2_max = cooldownsMax[3];
+        CD3_max = cooldownsMax[4];
+        CD4_max = cooldownsMax[5];
+
+        //Initially put all cooldown timers on 0
+        CDLM.fillAmount = 0;
+        CDRM.fillAmount = 0;
+        CD1.fillAmount = 0;
+        CD2.fillAmount = 0;
+        CD3.fillAmount = 0;
+        CD4.fillAmount = 0;
+   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CDSlider1.value > 0)
+        //Acquire list of currentCooldowns
+        currentCooldowns = PlayerManager.instance.player.GetComponent<Abilities>().abilityCooldowns;
+        float GlobalCD = PlayerManager.instance.player.GetComponent<AttackHandler>().globalCD;
+    
+        //Update, for each cooldowntimer, the current cooldown value based on local and global cooldowns
+        //Left mouse button
+        CDLM_current = currentCooldowns[0];
+
+        if (usesGlobalCD[0] && CDLM_current < GlobalCD)
         {
-            CDSlider1.value -= Time.deltaTime;
+            CDLM_current = GlobalCD;
         }
-        if (CDSlider2.value > 0)
+
+        if(requiresLevel[0] && stats.level < levelRequirements[0])
         {
-            CDSlider2.value -= Time.deltaTime;
+            CDLM_current = CDLM_max;
         }
-        if (CDSlider3.value > 0)
+
+        //Right mouse button
+        CDRM_current = currentCooldowns[1];
+
+        if (usesGlobalCD[1] && CDRM_current < GlobalCD)
         {
-            CDSlider3.value -= Time.deltaTime;
+            CDRM_current = GlobalCD;
         }
-        if (CDSlider4.value > 0)
+
+        if (requiresLevel[1] && stats.level < levelRequirements[1])
         {
-            CDSlider4.value -= Time.deltaTime;
+            CDRM_current = CDRM_max;
         }
-        if (CDSliderLM.value > 0)
+
+        //1 button
+        CD1_current = currentCooldowns[2];
+
+        if (usesGlobalCD[2] && CD1_current < GlobalCD)
         {
-            CDSliderLM.value -= Time.deltaTime;
+            CD1_current = GlobalCD;
         }
-        if (CDSliderRM.value > 0)
+
+        if (requiresLevel[2] && stats.level < levelRequirements[2])
         {
-            CDSliderRM.value -= Time.deltaTime;
+            CD1_current = CD1_max;
         }
+
+        //2 button
+        CD2_current = currentCooldowns[3];
+
+        if (usesGlobalCD[3] && CD2_current < GlobalCD)
+        {
+            CD2_current = GlobalCD;
+        }
+
+        if (requiresLevel[3] && stats.level < levelRequirements[3])
+        {
+            CD2_current = CD2_max;
+        }
+
+        //3 button
+        CD3_current = currentCooldowns[4];
+
+        if (usesGlobalCD[4] && CD3_current < GlobalCD)
+        {
+            CD3_current = GlobalCD;
+        }
+
+        if (requiresLevel[4] && stats.level < levelRequirements[4])
+        {
+            CD3_current = CD3_max;
+        }
+
+        //4 button
+        CD4_current = currentCooldowns[5];
+
+        if (usesGlobalCD[5] && CD4_current < GlobalCD)
+        {
+            CD4_current = GlobalCD;
+        }
+
+        if (requiresLevel[5] && stats.level < levelRequirements[5])
+        {
+            CD4_current = CD4_max;
+        }
+
+        //Fill the cooldown timers accordingly
+        CDLM.fillAmount = CDLM_current/CDLM_max;
+        CDRM.fillAmount = CDRM_current/CDRM_max;
+        CD1.fillAmount = CD1_current/CD1_max;
+        CD2.fillAmount = CD2_current/CD2_max;
+        CD3.fillAmount = CD3_current/CD3_max;
+        CD4.fillAmount = CD4_current/CD4_max;
     }
 }

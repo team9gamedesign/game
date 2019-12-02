@@ -50,7 +50,7 @@ public class Stats : MonoBehaviour
     
     //Gun Mage stats
     public int maxHeat;
-    [HideInInspector]
+    //[HideInInspector]
     public int heat;
     [HideInInspector]
     public bool barrier;

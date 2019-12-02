@@ -51,7 +51,7 @@ MonoBehaviour:
   angerNeeded: 0
   heatNeeded: 50
   requiresLevel: 1
-  levelRequirement: 4
+  levelRequirement: 3
 --- !u!114 &8612228630713670790
 MonoBehaviour:
   m_ObjectHideFlags: 0
