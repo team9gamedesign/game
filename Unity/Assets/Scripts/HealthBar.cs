@@ -25,6 +25,7 @@ public class HealthBar : MonoBehaviour
     {
         if(currentLevel != stats.level)
         {
+            currentLevel = stats.level;
             //Retrieve maxHealth and currentHealth to appropriately set healthBar filling
             maxHealth = stats.maxHealth;
             currentHealth = stats.health;
