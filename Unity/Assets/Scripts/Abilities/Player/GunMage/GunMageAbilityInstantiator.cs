@@ -61,6 +61,8 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         {
             shotLine.SetPosition(1, rayOrigin + transform.forward * shootRange);
         }
+
+        GetComponent<AudioSource>().Play();
     }
 
     public void InstantiateLastShot()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EarthShatterDamage : MonoBehaviour
 {
+    public GameObject sound;
     public float damage = 1;
     List<Collider> enemiesHit;
     // Start is called before the first frame update
@@ -11,6 +12,7 @@ public class EarthShatterDamage : MonoBehaviour
     {
         enemiesHit = new List<Collider>();
         Destroy(gameObject, 0.5f);
+        Destroy(Instantiate(sound), 5f);
     }
 
     // Update is called once per frame

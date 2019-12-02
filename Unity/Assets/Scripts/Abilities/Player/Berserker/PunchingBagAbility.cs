@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PunchingBagAbility : MonoBehaviour
 {
+    public GameObject sound;
     public float punchingBagTimer = 10.0f;
     public int punchingBagAngerAmount = 5;
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class PunchingBagAbility : MonoBehaviour
         stats.punchingBagTimer = punchingBagTimer * stats.doubleUpFactor;
         stats.doubleUpFactor = 1;
         stats.punchingBagAngerAmount = punchingBagAngerAmount;
+        Destroy(Instantiate(sound), 5f);
         Destroy(gameObject);
     }
 }

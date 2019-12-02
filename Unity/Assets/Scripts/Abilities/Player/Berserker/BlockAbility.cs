@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlockAbility : MonoBehaviour
 {
+    public GameObject sound;
     public int blockAmount = 3;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class BlockAbility : MonoBehaviour
         stats.blocking = true;
         stats.blockAmount = blockAmount * stats.doubleUpFactor;
         stats.doubleUpFactor = 1;
+        Destroy(Instantiate(sound), 5f);
         Destroy(gameObject);
     }
 }

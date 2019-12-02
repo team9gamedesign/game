@@ -58,3 +58,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  sound: {fileID: 1062938612352426333, guid: 00859a7fbb8f84efaa77ce3425f9cdc1, type: 3}
