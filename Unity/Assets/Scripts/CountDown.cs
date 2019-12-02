@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
+    //Insert the CoolDown timers
     public Image CDLM; 
     public Image CDRM;
     public Image CD1;
@@ -32,12 +33,14 @@ public class CountDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         List<GameObject> abilities = PlayerManager.instance.player.GetComponent<Abilities>().abilities;
         List<float> cooldownsMax = new List<float>();
         usesGlobalCD = new List<bool>();
 
         for(int i = 0; i < abilities.Count; ++i)
         {
+            //Retrieve for all abilities the max cooldown value, put them in list cooldownsMax
             Ability abilityComponent = abilities[i].GetComponent<Ability>();
             if(abilityComponent.usesGlobalCD)
             {
@@ -51,6 +54,7 @@ public class CountDown : MonoBehaviour
             }
         }
 
+        //Set cooldown timer max values according to list cooldownsMax 
         CDLM_max = cooldownsMax[0];
         CDRM_max = cooldownsMax[1];
         CD1_max = cooldownsMax[2];
@@ -58,6 +62,7 @@ public class CountDown : MonoBehaviour
         CD3_max = cooldownsMax[4];
         CD4_max = cooldownsMax[5];
 
+        //Initially put all cooldown timers on 0
         CDLM.fillAmount = 0;
         CDRM.fillAmount = 0;
         CD1.fillAmount = 0;
@@ -70,10 +75,11 @@ public class CountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Acquire list of currentCooldowns
         currentCooldowns = PlayerManager.instance.player.GetComponent<Abilities>().abilityCooldowns;
         float GlobalCD = PlayerManager.instance.player.GetComponent<AttackHandler>().globalCD;
-
-        
+    
+        //Update, for each cooldowntimer, the current cooldown value based on local and global cooldowns
         CDLM_current = currentCooldowns[0];
 
         if (usesGlobalCD[0] && CDLM_current < GlobalCD)
@@ -116,6 +122,7 @@ public class CountDown : MonoBehaviour
             CD4_current = GlobalCD;
         }
 
+        //Fill the cooldown timers accordingly
         CDLM.fillAmount = CDLM_current/CDLM_max;
         CDRM.fillAmount = CDRM_current/CDRM_max;
         CD1.fillAmount = CD1_current/CD1_max;

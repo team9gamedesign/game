@@ -12,16 +12,18 @@ public class HeatBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //angerBar = GameObject.Find("angerBarPlayer").GetComponent<Slider>(); //TODO: Fix
+        //Collect maxHeat and currentHeat values of the player
         maxHeat = GetComponent<Stats>().maxHeat;
         currentHeat = GetComponent<Stats>().heat;
 
+        //Fill the heatBar accordingly
         heatBar.fillAmount = currentHeat / maxHeat;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Update heatBar
         currentHeat = GetComponent<Stats>().heat;
         heatBar.fillAmount = currentHeat / maxHeat;
     }

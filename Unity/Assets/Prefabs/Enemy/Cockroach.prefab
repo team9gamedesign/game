@@ -73,6 +73,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3867060235302069474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619498138408285354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843d2ee7947fdb844a65701e379f0208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1619498138408285366}
+  healthBar: {fileID: 8564775198043155662}
+  currentAngleY: 0
+  newAngleY: 0
+  diffAngleY: 0
 --- !u!114 &6579541791987733247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +115,7 @@ GameObject:
   - component: {fileID: 5495675390125453409}
   - component: {fileID: 8218660318529046736}
   m_Layer: 0
-  m_Name: HealtBar BG C
+  m_Name: HealthBar BG C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,6 +345,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cockroach
       objectReference: {fileID: 0}
+    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 0db5c2bae22a403428bbacfef0351c48, type: 3}
+    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 002d6a4440bb01f4ca06b403732628f1, type: 2}
+    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4305524206464841790, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: maxHealth
@@ -337,26 +404,6 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: patrolDistance.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: patrolDistance.y
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: aggroRange
-      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4305524206464841785, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
@@ -413,6 +460,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: patrolDistance.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: patrolDistance.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305524206464841786, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
+        type: 3}
+      propertyPath: aggroRange
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 331096419422045820, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: abilities.Array.size
@@ -424,56 +491,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4467885788258589445, guid: bdd8f4a7e539143f28b0006e343e8132,
         type: 3}
-    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 0db5c2bae22a403428bbacfef0351c48, type: 3}
-    - target: {fileID: 8863660699008538718, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 002d6a4440bb01f4ca06b403732628f1, type: 2}
-    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Height
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8516653483019239200, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6170274747483462291, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
-        type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1830485312615068671, guid: 78a2f71aa00c64c57b9cf5e1cbe313b4,
         type: 3}
       propertyPath: m_LocalPosition.y

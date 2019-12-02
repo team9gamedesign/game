@@ -12,16 +12,18 @@ public class AngerBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //angerBar = GameObject.Find("angerBarPlayer").GetComponent<Slider>(); //TODO: Fix
+        //Collect maxAnger and currentAnger values of the player
         maxAnger = GetComponent<Stats>().maxAnger;
         currentAnger = GetComponent<Stats>().anger;
 
+        //Fill the angerBar accordingly
         angerBar.fillAmount = currentAnger / maxAnger;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Update angerBar
         currentAnger = GetComponent<Stats>().anger;
         angerBar.fillAmount = currentAnger / maxAnger;
     }

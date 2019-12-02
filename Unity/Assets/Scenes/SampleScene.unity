@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 4343271840877051179, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
       propertyPath: spawnTime
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4343271840877051179, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
@@ -280,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 4343271840877051179, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
       propertyPath: spawnTime
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4343271840877051179, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e60f3b2c83a0342a84929dc0bdac84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1679513497}
 --- !u!4 &597900740
 Transform:
   m_ObjectHideFlags: 0
@@ -717,6 +717,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1679513497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7373561839609714687, guid: 70c297b74a39c0e438243af61f155e8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 943242746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861790291
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +891,7 @@ PrefabInstance:
     - target: {fileID: 4343271840877051179, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
       propertyPath: spawnTime
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4343271840877051179, guid: a58a7067a7df64e328acb4e821da7b5f,
         type: 3}
