@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitSewer : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class ExitSewer : MonoBehaviour
             camera.GetComponent<SewerGlobalVars>().exitInfo();
             if (Input.GetKeyDown("space"))
             {
-                //Add code here to switch scenes
+                SceneManager.LoadScene("BossPart");
             }
         }
     }

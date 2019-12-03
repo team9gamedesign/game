@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ObjectClickerScript : MonoBehaviour
@@ -9,6 +10,7 @@ public class ObjectClickerScript : MonoBehaviour
     public GameObject ship;
     public GameObject planet1;
     public GameObject textBox;
+    public GameObject button;
     public Text infoBoxText;
 
     private int select;
@@ -45,27 +47,34 @@ public class ObjectClickerScript : MonoBehaviour
 
     void OverViewInfo(GameObject go)
     {
+        Vector2 textBoxPosition = Camera.main.WorldToScreenPoint(go.transform.position);
         if(go.name.Equals(spaceStation.name))
         {
-            infoBoxText.text = "Main base, here is your hub";
+            infoBoxText.text = "The City in Space, a technological marvel and your home.";
             textBox.SetActive(true);
+            button.SetActive(false);
+            textBox.GetComponent<RectTransform>().anchoredPosition = textBoxPosition;
             select = 0;
         }
         else if(go.name.Equals(planet1.name)) {
-            infoBoxText.text = "Planet Dirt, your mission is to have fun and kill enemeis.";
+            infoBoxText.text = "Coranus, a planet filled with valuable resources. You're tasked with killing the planet leader, King Bjor XI.";
             textBox.SetActive(true);
+            button.SetActive(true);
+            textBox.GetComponent<RectTransform>().anchoredPosition = textBoxPosition;
             select = 1;
         }
         else if(go.name.Equals(ship.name))
         {
-            infoBoxText.text = "The proud spaceship, ready to take you anywhere in the galaxy in a matter of seconds.";
+            infoBoxText.text = "Your spaceship, ready to take you anywhere in the galaxy in a matter of seconds.";
             textBox.SetActive(true);
+            button.SetActive(false);
+            textBox.GetComponent<RectTransform>().anchoredPosition = textBoxPosition;
             select = 2;
         }
     }
 
     public void onClick()
     {
-        print("You clicked it");
+        SceneManager.LoadScene("CrashSite");
     }
 }
