@@ -50,6 +50,8 @@ MonoBehaviour:
   requiresBerserkerMode: 0
   angerNeeded: 0
   heatNeeded: 30
+  requiresLevel: 1
+  levelRequirement: 5
 --- !u!114 &-6400250194760175678
 MonoBehaviour:
   m_ObjectHideFlags: 0

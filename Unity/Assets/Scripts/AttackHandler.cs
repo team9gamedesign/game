@@ -27,6 +27,11 @@ public class AttackHandler : MonoBehaviour
         GameObject abilityPrefab = abilities.abilities[abilityIndex];
         Ability abilityComponent = abilityPrefab.GetComponent<Ability>();
 
+        if (abilityComponent.requiresLevel && stats.level < abilityComponent.levelRequirement)
+        {
+            return;
+        }
+
         bool canUseAbility = false;
 
         if (abilityComponent.usesGlobalCD && Mathf.Approximately(globalCD, 0))
@@ -72,14 +77,11 @@ public class AttackHandler : MonoBehaviour
             GameObject ability = Instantiate(abilityPrefab, transform.position, transform.rotation);
             ability.GetComponent<Ability>().user = gameObject;
 
-            CountDown countDown = GameObject.Find("CountDownHandler").GetComponent<CountDown>(); //TODO: This causes a bug when enemies use it. Remove and put somewhere else!
             if (abilityComponent.usesGlobalCD)
             {
                 globalCD = stats.globalCDValue;
-                countDown.CDSliders[abilityIndex].value = globalCD;
             }
             abilities.abilityCooldowns[abilityIndex] = ability.GetComponent<Ability>().cooldown;
-            countDown.CDSliders[abilityIndex].value = Mathf.Max(countDown.CDSliders[abilityIndex].value, ability.GetComponent<Ability>().cooldown);
         }
     }
 }

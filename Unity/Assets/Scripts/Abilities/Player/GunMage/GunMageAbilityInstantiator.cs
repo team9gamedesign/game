@@ -34,6 +34,7 @@ public class GunMageAbilityInstantiator : MonoBehaviour
             transform.position.z
         );
         GameObject icePatchObject = Instantiate(icePatch, transformGround, Quaternion.identity);
+        icePatchObject.GetComponent<IcePatch>().damageFactor = stats.damageFactor;
         icePatchObject.GetComponent<IcePatch>().maxSize *= stats.doubleUpFactor;
         stats.doubleUpFactor = 1;
     }
@@ -52,7 +53,7 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Enemy"))
             {
-                hit.collider.gameObject.GetComponent<Stats>().ChangeHealth(-shootDamage);
+                hit.collider.gameObject.GetComponent<Stats>().ChangeHealth(-shootDamage * stats.damageFactor);
                 GetComponent<Stats>().ChangeHeat(shootHeat);
             }
             shotLine.SetPosition(1, hit.point);
@@ -60,6 +61,8 @@ public class GunMageAbilityInstantiator : MonoBehaviour
         {
             shotLine.SetPosition(1, rayOrigin + transform.forward * shootRange);
         }
+
+        GetComponent<AudioSource>().Play();
     }
 
     public void InstantiateLastShot()
@@ -71,7 +74,8 @@ public class GunMageAbilityInstantiator : MonoBehaviour
 
     public void InstantiateFireBall()
     {
-        Instantiate(fireBall, gunEnd.transform.position, transform.rotation);
+        GameObject fireBallObject = Instantiate(fireBall, gunEnd.transform.position, transform.rotation);
+        fireBallObject.GetComponent<FireBall>().damage *= stats.damageFactor;
         Animator animator = GetComponent<Animator>();
         animator.SetInteger("FireBall", animator.GetInteger("FireBall") - 1);
     }

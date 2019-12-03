@@ -7,6 +7,9 @@ public class IcePatch : MonoBehaviour
     public float aliveTime;
     private float aliveTimer;
 
+    [HideInInspector]
+    public float damageFactor;
+
     public Vector3 maxSize;
 
     // Start is called before the first frame update
@@ -58,7 +61,7 @@ public class IcePatch : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Stats>().ChangeHealth(-Time.deltaTime);
+            other.GetComponent<Stats>().ChangeHealth(-Time.deltaTime * damageFactor);
         }
     }
 }

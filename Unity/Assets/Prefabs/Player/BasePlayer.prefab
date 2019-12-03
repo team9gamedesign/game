@@ -127,12 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31333986197cd247bbb2e8fe7c039a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
   health: 10
+  maxHealth: 0
   speed: 6
   globalCDValue: 0.5
   maxGravity: 0
   gravity: 0
+  damageFactor: 1
   maxAnger: 0
   anger: 0
   berserkerMode: 0
@@ -150,6 +151,14 @@ MonoBehaviour:
   bullRushDamage: 0
   blocking: 0
   blockAmount: 0
+  doubleUpFactor: 1
+  maxHeat: 0
+  heat: 0
+  barrier: 0
+  laser: 0
+  level: 1
+  xp: 0
+  xpToNextLevel: 0
 --- !u!114 &3236091141547412714
 MonoBehaviour:
   m_ObjectHideFlags: 0
