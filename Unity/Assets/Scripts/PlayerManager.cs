@@ -8,8 +8,16 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(this);
         instance = this;
+        player = Instantiate(playingGunMage ? GunMage : Berserker, transform.position, Quaternion.identity);
+        DontDestroyOnLoad(player);
     }
 
+    [HideInInspector]
     public GameObject player;
+
+    public GameObject GunMage;
+    public GameObject Berserker;
+    public bool playingGunMage;
 }
