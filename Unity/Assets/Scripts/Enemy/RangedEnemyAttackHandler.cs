@@ -1,23 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RangedEnemyAttackHandler : AttackHandler
 {
     GameObject player;
-
+    public bool throwBombAbility = false;
     new void Start()
     {
         base.Start();
-        player = GameObject.FindWithTag("Player");
+        player = PlayerManager.instance.player;
     }
 
     void Update()
     {
         globalCD = Mathf.Max(0, globalCD - Time.deltaTime);
-        if (Random.Range(0, 1) <= 0.1f && Vector3.Distance(transform.position, player.transform.position) <= 25)
+        if (globalCD <= 0 && Vector3.Distance(transform.position, player.transform.position) <= 15)
         {
-            UseAbility(0);
+            if(throwBombAbility)
+            {
+                UseAbility(1);
+            }
+            else
+            {
+                UseAbility(0);
+            }
+            
         }
     }
 }

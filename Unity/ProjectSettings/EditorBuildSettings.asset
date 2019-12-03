@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/UsedAssets/Dungeon.unity
+    guid: a4bd5594bd0a64c18bacf5b26fee1354
   m_configObjects: {}
