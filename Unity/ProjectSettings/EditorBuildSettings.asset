@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/TestLevels/ClassSelectionScreen.unity
+    guid: 31d853b2b232d42209da282667097465
+  - enabled: 1
     path: Assets/TestLevels/HubOverview.unity
     guid: 08285f6f1d2a116439065ae3cc40ee88
   - enabled: 1
