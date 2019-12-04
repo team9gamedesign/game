@@ -75,6 +75,13 @@ public class ObjectClickerScript : MonoBehaviour
 
     public void onClick()
     {
+        ship.GetComponent<Animation>().Play();
+        StartCoroutine(WaitUntilAnimationIsDone());
+    }
+
+    IEnumerator WaitUntilAnimationIsDone()
+    {
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("CrashSite");
     }
 }

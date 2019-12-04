@@ -1033,6 +1033,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6914178778898963684}
   m_PrefabAsset: {fileID: 0}
+--- !u!111 &1246153292
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246153290}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 60e093b5e3a265846bdbde366783d6da, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 60e093b5e3a265846bdbde366783d6da, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1275929545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1328,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.2317005
+  m_Center: {x: 0.05453655, y: 0, z: 0}
 --- !u!23 &1563299271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1512,6 +1528,7 @@ GameObject:
   - component: {fileID: 1745829304}
   - component: {fileID: 1745829307}
   - component: {fileID: 1745829308}
+  - component: {fileID: 1745829309}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1620,6 +1637,66 @@ MonoBehaviour:
   skybox3: {fileID: 2100000, guid: 9f1c9c0a80979e84bb3c7d0ba3e0087b, type: 2}
   skybox4: {fileID: 2100000, guid: 5336048ff90d2b4439eae29a5a3524cd, type: 2}
   mainLight: {fileID: 389748133}
+--- !u!108 &1745829309
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745829303}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.4
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1805900406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2297,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6914178777720805039, guid: 0f46feb502375a6479362d44bc91b219, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f46feb502375a6479362d44bc91b219, type: 3}
 --- !u!1001 &7223101605606641802
 PrefabInstance:
@@ -2233,6 +2311,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Planet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223101607164173644, guid: 9e34fcb1918481747be6ba4e5227e3cc,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2317005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223101607164173644, guid: 9e34fcb1918481747be6ba4e5227e3cc,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.05453655
       objectReference: {fileID: 0}
     - target: {fileID: 7223101607164173635, guid: 9e34fcb1918481747be6ba4e5227e3cc,
         type: 3}

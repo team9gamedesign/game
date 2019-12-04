@@ -19,6 +19,7 @@ public class TurnValve : MonoBehaviour
                     {
                         camera.GetComponent<SewerGlobalVars>().turnedAValv();
                     }
+                    GetComponent<Animation>().Play();
                     turned = true;
                 }
                 print("You turned the valve");
