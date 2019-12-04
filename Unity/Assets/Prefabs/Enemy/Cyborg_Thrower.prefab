@@ -673,6 +673,7 @@ MonoBehaviour:
   level: 1
   xp: 0
   xpToNextLevel: 0
+  levelUpAnimation: {fileID: 0}
 --- !u!114 &1333398388869753600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xp: 100
+  combinationItems:
+  - {fileID: 3360234793293407040, guid: 69be2019def45417b951b23222be92a2, type: 3}
+  - {fileID: 3539171826235362025, guid: 479ddf388b43343bdad5fe00e3c72bb5, type: 3}
 --- !u!95 &1333398388869753602
 Animator:
   serializedVersion: 3
@@ -752,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalCD: 0
   throwBombAbility: 1
+  shootDistance: 15
 --- !u!114 &2159046781750540242
 MonoBehaviour:
   m_ObjectHideFlags: 0
