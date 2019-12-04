@@ -27,7 +27,8 @@ public class MeleeEnemyAttack : StateMachineBehaviour
         timer += Time.deltaTime;
         if (timer > dealDamageAfterSeconds)
         {
-            player.GetComponent<Stats>().ChangeHealth(-damage);
+            if(Vector3.Distance(player.transform.position,animator.transform.position) < 7)
+                player.GetComponent<Stats>().ChangeHealth(-damage);
             dealtDamage = true;
         }
     }

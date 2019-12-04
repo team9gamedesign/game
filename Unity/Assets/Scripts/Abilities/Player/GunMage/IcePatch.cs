@@ -42,7 +42,7 @@ public class IcePatch : MonoBehaviour
                 Mathf.Lerp(transform.localScale.z, 0, 0.25f)
             );
 
-            if(transform.localScale.magnitude <= 0.01f)
+            if(aliveTimer <= -2)
             {
                 Destroy(gameObject);
             }
