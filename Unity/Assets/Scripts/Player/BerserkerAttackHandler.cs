@@ -8,12 +8,16 @@ public class BerserkerAttackHandler : AttackHandler
 
     Animator animator;
 
+    public GameObject berserkerModeIndication;
+
     new void Start()
     {
         base.Start();
         angerChangeTimer = stats.angerIncreaseTime;
 
         animator = GetComponent<Animator>();
+
+        berserkerModeIndication.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,6 +44,7 @@ public class BerserkerAttackHandler : AttackHandler
         if(stats.anger == stats.maxAnger && !stats.berserkerMode)
         {
             stats.berserkerMode = true;
+            berserkerModeIndication.SetActive(true);
             angerChangeTimer = stats.angerDecreaseTime;
 
             stats.globalCDValue /= 2; //TODO: This can cause rounding errors. Store values and multiply, then set back to values when going back to tank mode
@@ -48,6 +53,7 @@ public class BerserkerAttackHandler : AttackHandler
         } else if(stats.anger == 0 && stats.berserkerMode)
         {
             stats.berserkerMode = false;
+            berserkerModeIndication.SetActive(false);
             angerChangeTimer = stats.angerIncreaseTime;
 
             stats.globalCDValue *= 2;
