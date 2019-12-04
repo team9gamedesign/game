@@ -10,7 +10,8 @@ public class PlayerManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
         instance = this;
-        player = Instantiate(playingGunMage ? GunMage : Berserker, transform.position, Quaternion.identity);
+        playingBerserker = ClassStorage.instance.usingBerserker;
+        player = Instantiate(playingBerserker ? Berserker : GunMage, transform.position, Quaternion.identity);
         DontDestroyOnLoad(player);
     }
 
@@ -19,5 +20,7 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject GunMage;
     public GameObject Berserker;
-    public bool playingGunMage;
+
+    [HideInInspector]
+    public bool playingBerserker;
 }
