@@ -63,6 +63,8 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public int xpToNextLevel;
 
+    public GameObject levelUpAnimation;
+
     private void Start()
     {
         if(gameObject.CompareTag("Player"))
@@ -134,6 +136,7 @@ public class Stats : MonoBehaviour
         xp -= xpToNextLevel;
         SetStatsFromLevel(level);
         health = maxHealth;
+        Instantiate(levelUpAnimation, transform);
     }
 
     public int GetXPToNextLevel(int level)

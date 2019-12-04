@@ -159,6 +159,8 @@ MonoBehaviour:
   level: 1
   xp: 0
   xpToNextLevel: 0
+  levelUpAnimation: {fileID: 8423753477238047821, guid: 2b834e026daa44df8be3b8ac46a57942,
+    type: 3}
 --- !u!114 &3236091141547412714
 MonoBehaviour:
   m_ObjectHideFlags: 0
