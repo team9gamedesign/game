@@ -10,6 +10,7 @@ public class GunMageAbilityInstantiator : MonoBehaviour
     public int shootHeat;
     public GameObject barrier;
     public GameObject icePatch;
+    public GameObject icePatchPosition;
     public GameObject fireBall;
 
     private Stats stats;
@@ -28,11 +29,7 @@ public class GunMageAbilityInstantiator : MonoBehaviour
 
     public void InstantiateIcePatch()
     {
-        Vector3 transformGround = new Vector3(
-            transform.position.x,
-            0,
-            transform.position.z
-        );
+        Vector3 transformGround = icePatchPosition.transform.position;
         GameObject icePatchObject = Instantiate(icePatch, transformGround, Quaternion.identity);
         icePatchObject.GetComponent<IcePatch>().damageFactor = stats.damageFactor;
         icePatchObject.GetComponent<IcePatch>().maxSize *= stats.doubleUpFactor;
