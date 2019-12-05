@@ -25,7 +25,7 @@ public class Die : MonoBehaviour
 
             foreach(GameObject item in combinationItems)
             {
-                if(Random.Range(0f, 1f) <= 0.1f)
+                if(Random.Range(0f, 1f) <= 0.05f)
                 {
                     Instantiate(item, transform.position + Vector3.up, Quaternion.identity);
                     break;

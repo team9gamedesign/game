@@ -57,5 +57,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5266036624f8347d2a2b01ccce689d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 2
   sound: {fileID: 1062938612352426333, guid: 00859a7fbb8f84efaa77ce3425f9cdc1, type: 3}
