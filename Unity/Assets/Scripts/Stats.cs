@@ -63,6 +63,8 @@ public class Stats : MonoBehaviour
     [HideInInspector]
     public int xpToNextLevel;
 
+    public GameObject levelUpAnimation;
+
     private void Start()
     {
         if(gameObject.CompareTag("Player"))
@@ -134,22 +136,23 @@ public class Stats : MonoBehaviour
         xp -= xpToNextLevel;
         SetStatsFromLevel(level);
         health = maxHealth;
+        Instantiate(levelUpAnimation, transform);
     }
 
     public int GetXPToNextLevel(int level)
     {
-        float exponent = 1.5f;
-        float baseXP = 1000;
+        float exponent = 1.2f;
+        float baseXP = 800;
         return (int)Mathf.Floor(baseXP * Mathf.Pow(level, exponent));
     }
 
     public int GetHealthFromLevel(int level)
     {
-        return level * 100;
+        return 100 + (level-1) * 50;
     }
 
     public float GetDamageFactorFromLevel(int level)
     {
-        return level;
+        return 1 + 0.33f * level;
     }
 }

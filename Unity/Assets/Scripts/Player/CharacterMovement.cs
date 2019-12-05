@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -23,7 +22,18 @@ public class CharacterMovement : MonoBehaviour
         if(stats.health > 0)
         {
             UpdateMovement();
+        } else
+        {
+            StartCoroutine(RestartGame());
         }
+    }
+
+    IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadSceneAsync(0);
+        Destroy(PlayerManager.instance.player);
+        PlayerManager.instance.player = null;
     }
 
     void UpdateMovement()

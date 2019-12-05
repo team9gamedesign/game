@@ -66,4 +66,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 1789065774346146238, guid: b5a632c3be30a4be4a4401ee3378f753, type: 3}
   punchingBagTimer: 10
-  punchingBagAngerAmount: 5
+  punchingBagAngerAmount: 4
