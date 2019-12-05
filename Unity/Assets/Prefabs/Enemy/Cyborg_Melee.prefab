@@ -1660,6 +1660,7 @@ MonoBehaviour:
   level: 1
   xp: 0
   xpToNextLevel: 0
+  levelUpAnimation: {fileID: 0}
 --- !u!114 &26158130866973462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,6 +1706,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xp: 100
+  combinationItems:
+  - {fileID: 3360234793293407040, guid: 69be2019def45417b951b23222be92a2, type: 3}
+  - {fileID: 3539171826235362025, guid: 479ddf388b43343bdad5fe00e3c72bb5, type: 3}
 --- !u!114 &26158130866973467
 MonoBehaviour:
   m_ObjectHideFlags: 0
