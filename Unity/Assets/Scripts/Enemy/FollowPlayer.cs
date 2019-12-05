@@ -92,7 +92,10 @@ public class FollowPlayer : MonoBehaviour
             if(timeBetweenPatrolsTimer < 0)
             {
                 timeBetweenPatrolsTimer = timeBetweenPatrols;
-                agent.SetDestination(transform.position + new Vector3(Random.Range(-patrolDistance.x,patrolDistance.x), 0, Random.Range(-patrolDistance.y,patrolDistance.y)));
+                NavMeshHit hit;
+                Vector3 sampledPosition =  new Vector3(transform.position.x + Random.Range(-patrolDistance.x,patrolDistance.x), 0, transform.position.z + Random.Range(-patrolDistance.y,patrolDistance.y));
+                NavMesh.SamplePosition(sampledPosition, out hit, patrolDistance.x, 1);
+                agent.SetDestination(hit.position);
             }
         }
     }

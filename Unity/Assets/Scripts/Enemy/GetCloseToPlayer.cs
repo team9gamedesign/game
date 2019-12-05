@@ -68,7 +68,7 @@ public class GetCloseToPlayer : MonoBehaviour
                 obstacle.enabled = false;
                 agent.enabled = true;
             }
-            if(!agent.hasPath || agent.isPathStale || Vector3.Distance(agent.path.corners[agent.path.corners.Length - 1], player.position) > 1)
+            if(!agent.hasPath || agent.isPathStale)
             {
                 NavMeshPath path = new NavMeshPath();
                 agent.CalculatePath(player.position, path);
